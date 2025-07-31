@@ -2,13 +2,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(AudioSource))]
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float speed = 5f;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip swipe1;    // sound for first slash
+    [SerializeField] private AudioClip swipe2;    // sound for combo slash
 
     private Rigidbody2D rb;
     private Animator    anim;
+    private AudioSource audioSource;
 
     private Vector2 moveInput;
     private Vector2 lastMoveDir;
@@ -17,42 +23,42 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 attackDir;
     private int     facing = 1;
 
-    // Animator hashes
-    private static readonly int HashRun       = Animator.StringToHash("Run");
-    private static readonly int HashIdle      = Animator.StringToHash("Idle");
-    private static readonly int HashAttack    = Animator.StringToHash("Attack");
-    private static readonly int HashAttack2   = Animator.StringToHash("Attack2");
-    private static readonly int HashHoriz     = Animator.StringToHash("horizontal");
-    private static readonly int HashVert      = Animator.StringToHash("vertical");
-    private const      string StateAttack    = "Attack";
-    private const      string StateAttack2   = "Attack2";
+    // Animator hashes & state names
+    private static readonly int HashRun     = Animator.StringToHash("Run");
+    private static readonly int HashIdle    = Animator.StringToHash("Idle");
+    private static readonly int HashAttack  = Animator.StringToHash("Attack");
+    private static readonly int HashAttack2 = Animator.StringToHash("Attack2");
+    private static readonly int HashHoriz   = Animator.StringToHash("horizontal");
+    private static readonly int HashVert    = Animator.StringToHash("vertical");
+    private const      string StateAttack  = "Attack";
+    private const      string StateAttack2 = "Attack2";
 
     private void Awake()
     {
-        rb   = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        rb          = GetComponent<Rigidbody2D>();
+        anim        = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
     {
-        // freeze if attacking
-        rb.linearVelocity = isAttacking 
-            ? Vector2.zero 
-            : moveInput * speed;
+        // freeze if attacking, else move
+        rb.linearVelocity = isAttacking ? Vector2.zero : moveInput * speed;
 
-        // flip based on active direction
-        float dirX = isAttacking 
-            ? attackDir.x 
+        // flip sprite by the active x‐direction
+        float dirX = isAttacking
+            ? attackDir.x
             : (moveInput.x != 0 ? moveInput.x : lastMoveDir.x);
+
         if ((dirX > 0 && facing < 0) || (dirX < 0 && facing > 0))
             Flip();
 
-        // Run/Idle Bools
+        // drive Run/Idle bools
         bool running = !isAttacking && moveInput.sqrMagnitude > 0.01f;
         anim.SetBool(HashRun, running);
         anim.SetBool(HashIdle, !running && !isAttacking);
 
-        // driving blend tree when attacking
+        // feed blend‐tree floats when attacking
         if (isAttacking)
         {
             anim.SetFloat(HashHoriz, attackDir.x);
@@ -68,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = s;
     }
 
-    // — PlayerInput Send Messages
+    // PlayerInput Send Messages
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
@@ -82,12 +88,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isAttacking)
         {
-            // start first attack
             StartCoroutine(DoAttackCombo());
         }
         else if (!wantCombo)
         {
-            // queue combo if still in first attack
             wantCombo = true;
         }
     }
@@ -97,14 +101,15 @@ public class PlayerMovement : MonoBehaviour
         isAttacking = true;
         wantCombo   = false;
 
-        // — determine attackDir just once
-        Vector2 d = moveInput.sqrMagnitude > 0.01f 
-            ? moveInput 
+        // determine attack direction
+        Vector2 d = moveInput.sqrMagnitude > 0.01f
+            ? moveInput
             : lastMoveDir;
+
         // snap to cardinal
-        if (Mathf.Abs(d.x) > Mathf.Abs(d.y)) 
+        if (Mathf.Abs(d.x) > Mathf.Abs(d.y))
             d = new Vector2(Mathf.Sign(d.x), 0f);
-        else 
+        else
             d = new Vector2(0f, Mathf.Sign(d.y));
         attackDir = d;
 
@@ -113,22 +118,33 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat(HashVert,  attackDir.y);
         anim.SetBool(HashAttack, true);
         anim.Play(StateAttack, 0, 0f);
-        yield return null;                                     // let state register
+
+        // play swipe1
+        if (swipe1 != null)
+            audioSource.PlayOneShot(swipe1);
+
+        yield return null;  // wait a frame for the state to apply
         float len1 = anim.GetCurrentAnimatorStateInfo(0).length / anim.speed;
         yield return new WaitForSeconds(len1);
 
-        // reset first attack flag
         anim.SetBool(HashAttack, false);
 
-        // —— COMBO? ——
+        // —— COMBO ATTACK? ——
         if (wantCombo)
         {
             wantCombo = false;
+
             anim.SetBool(HashAttack2, true);
             anim.Play(StateAttack2, 0, 0f);
+
+            // play swipe2
+            if (swipe2 != null)
+                audioSource.PlayOneShot(swipe2);
+
             yield return null;
             float len2 = anim.GetCurrentAnimatorStateInfo(0).length / anim.speed;
             yield return new WaitForSeconds(len2);
+
             anim.SetBool(HashAttack2, false);
         }
 
