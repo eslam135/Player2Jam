@@ -124,8 +124,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Happy_Sheep_Frame_0
     originalName: 
-    pivot: {x: 0.4883721, y: -1.1052631}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -145,8 +145,8 @@ ScriptedImporter:
     uvTransform: {x: 57, y: 92}
   - name: Happy_Sheep_Frame_1
     originalName: 
-    pivot: {x: 0.4883721, y: -1.1052631}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -166,8 +166,8 @@ ScriptedImporter:
     uvTransform: {x: 57, y: 138}
   - name: Happy_Sheep_Frame_2
     originalName: 
-    pivot: {x: 0.4883721, y: -1.1052631}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -187,8 +187,8 @@ ScriptedImporter:
     uvTransform: {x: 57, y: 184}
   - name: Happy_Sheep_Frame_3
     originalName: 
-    pivot: {x: 0.4883721, y: -1.1052631}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -208,8 +208,8 @@ ScriptedImporter:
     uvTransform: {x: 111, y: 4}
   - name: Happy_Sheep_Frame_4
     originalName: 
-    pivot: {x: 0.4883721, y: -1.1351352}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -229,8 +229,8 @@ ScriptedImporter:
     uvTransform: {x: 111, y: 142}
   - name: Happy_Sheep_Frame_5
     originalName: 
-    pivot: {x: 0.47826087, y: -1.1666666}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -250,8 +250,8 @@ ScriptedImporter:
     uvTransform: {x: 57, y: 4}
   - name: Happy_Sheep_Frame_6
     originalName: 
-    pivot: {x: 0.47826087, y: -1.1666666}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -271,8 +271,8 @@ ScriptedImporter:
     uvTransform: {x: 57, y: 48}
   - name: Happy_Sheep_Frame_7
     originalName: 
-    pivot: {x: 0.47727275, y: -1.1351352}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -292,8 +292,8 @@ ScriptedImporter:
     uvTransform: {x: 162, y: 4}
   - name: Happy_Sheep_Frame_8
     originalName: 
-    pivot: {x: 0.4883721, y: -1.1052631}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -313,8 +313,8 @@ ScriptedImporter:
     uvTransform: {x: 111, y: 50}
   - name: Happy_Sheep_Frame_9
     originalName: 
-    pivot: {x: 0.4883721, y: -1.1052631}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -334,8 +334,8 @@ ScriptedImporter:
     uvTransform: {x: 111, y: 96}
   - name: Happy_Sheep_Frame_10
     originalName: 
-    pivot: {x: 0.5, y: -0.875}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -355,8 +355,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 174}
   - name: Happy_Sheep_Frame_11
     originalName: 
-    pivot: {x: 0.46666667, y: -0.84}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -376,8 +376,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 63}
   - name: Happy_Sheep_Frame_12
     originalName: 
-    pivot: {x: 0.46666667, y: -0.8235294}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -397,8 +397,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Happy_Sheep_Frame_13
     originalName: 
-    pivot: {x: 0.46666667, y: -0.93333334}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -418,8 +418,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 121}
   - name: Happy_Sheep_Frame_14
     originalName: 
-    pivot: {x: 0.4814815, y: -1.4000001}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
