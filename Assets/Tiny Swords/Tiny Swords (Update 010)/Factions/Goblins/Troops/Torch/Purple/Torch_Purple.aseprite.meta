@@ -124,7 +124,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Torch_Purple_Frame_0
     originalName: 
-    pivot: {x: 0.5633803, y: -0.6082474}
+    pivot: {x: 0.5, y: 0.35382017}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -134,7 +134,7 @@ ScriptedImporter:
       y: 420
       width: 71
       height: 97
-    spriteID: 736a47585bd95934d913b50d098c3f94
+    spriteID: 1fe3a0b4d540b2442bb7b3fef86f26dd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -145,8 +145,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 420}
   - name: Torch_Purple_Frame_1
     originalName: 
-    pivot: {x: 0.6233766, y: -0.6082474}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -155,7 +155,7 @@ ScriptedImporter:
       y: 809
       width: 77
       height: 97
-    spriteID: 9e58c8952a571de4a8aad2b2a0fbcc95
+    spriteID: c5f4265aca681f64fbc6781c4d692cf7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -166,8 +166,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 809}
   - name: Torch_Purple_Frame_2
     originalName: 
-    pivot: {x: 0.35999998, y: -0.6020408}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -176,7 +176,7 @@ ScriptedImporter:
       y: 914
       width: 75
       height: 98
-    spriteID: e6dd47e2da9247847942420e194934f5
+    spriteID: 62730bc878e20474d96c44656ecfac5b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -187,8 +187,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 914}
   - name: Torch_Purple_Frame_3
     originalName: 
-    pivot: {x: 0.5810811, y: -0.7468354}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -197,7 +197,7 @@ ScriptedImporter:
       y: 281
       width: 74
       height: 79
-    spriteID: 86bb40dfcd25e42468a7bd52af77f4d6
+    spriteID: e36dcb42aebda924b8e646dac4d00e73
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -208,8 +208,8 @@ ScriptedImporter:
     uvTransform: {x: 381, y: 281}
   - name: Torch_Purple_Frame_4
     originalName: 
-    pivot: {x: 0.59999996, y: -0.71951216}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -218,7 +218,7 @@ ScriptedImporter:
       y: 889
       width: 75
       height: 82
-    spriteID: c12f7d7073d82414c81385d8790062ab
+    spriteID: 3c8f4d52382b0e7448b8836ee81c930a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -229,8 +229,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 889}
   - name: Torch_Purple_Frame_5
     originalName: 
-    pivot: {x: 0.59459454, y: -0.7108433}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -239,7 +239,7 @@ ScriptedImporter:
       y: 4
       width: 74
       height: 83
-    spriteID: ad55be10a6a41b2468d6602f06f15d1a
+    spriteID: 99e837c824bca1a42a6130d4920580cd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,8 +250,8 @@ ScriptedImporter:
     uvTransform: {x: 381, y: 4}
   - name: Torch_Purple_Frame_6
     originalName: 
-    pivot: {x: 0.5833334, y: -0.70238096}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -260,7 +260,7 @@ ScriptedImporter:
       y: 189
       width: 72
       height: 84
-    spriteID: 6ccd7d086f6c23346b90346079a1e480
+    spriteID: 327df3aa8fc103b4bbc5f61a961fab75
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -271,8 +271,8 @@ ScriptedImporter:
     uvTransform: {x: 381, y: 189}
   - name: Torch_Purple_Frame_7
     originalName: 
-    pivot: {x: 0.57746476, y: -0.68604654}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -281,7 +281,7 @@ ScriptedImporter:
       y: 95
       width: 71
       height: 86
-    spriteID: 8ee75224efec2b64ab92f975a2e0c2ea
+    spriteID: 2dde18640998794429d6f229fd8c3850
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,8 +292,8 @@ ScriptedImporter:
     uvTransform: {x: 381, y: 95}
   - name: Torch_Purple_Frame_8
     originalName: 
-    pivot: {x: 0.57746476, y: -0.67045456}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -302,7 +302,7 @@ ScriptedImporter:
       y: 793
       width: 71
       height: 88
-    spriteID: 2043b534a626da54b8eaba1797aaf108
+    spriteID: f135d327711c5fa48b68427abd53442f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -313,8 +313,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 793}
   - name: Torch_Purple_Frame_9
     originalName: 
-    pivot: {x: 0.5633803, y: -0.6629213}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -323,7 +323,7 @@ ScriptedImporter:
       y: 696
       width: 71
       height: 89
-    spriteID: 6c9631880a507fa4ba93d2188a5840f9
+    spriteID: 9af0d4b7604a34543982d6c39485e80e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -334,8 +334,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 696}
   - name: Torch_Purple_Frame_10
     originalName: 
-    pivot: {x: 0.7129629, y: -0.80821913}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -344,7 +344,7 @@ ScriptedImporter:
       y: 85
       width: 108
       height: 73
-    spriteID: e9822f937f64f184081def01f5ac3f13
+    spriteID: 2078440aeb2e1474d93e836d0b05ce98
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -355,8 +355,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 85}
   - name: Torch_Purple_Frame_11
     originalName: 
-    pivot: {x: 0.6868687, y: -0.77631575}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -365,7 +365,7 @@ ScriptedImporter:
       y: 725
       width: 99
       height: 76
-    spriteID: ebb15613d038f91489a1519d467a8dc9
+    spriteID: d6ffc271cedaaed4a8cc29efdebbda12
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -376,8 +376,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 725}
   - name: Torch_Purple_Frame_12
     originalName: 
-    pivot: {x: 0.72380954, y: -0.80821913}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -386,7 +386,7 @@ ScriptedImporter:
       y: 166
       width: 105
       height: 73
-    spriteID: 44c31d08c8be23244862243a4cf2fc30
+    spriteID: d8a07a57faeec5749b2613afd004474f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -397,8 +397,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 166}
   - name: Torch_Purple_Frame_13
     originalName: 
-    pivot: {x: 0.6936937, y: -0.80821913}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -407,7 +407,7 @@ ScriptedImporter:
       y: 4
       width: 111
       height: 73
-    spriteID: e78534135333ae34aa5612dc5d7f330e
+    spriteID: db248b11e07756840a424d45ab4672b4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -418,8 +418,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 4}
   - name: Torch_Purple_Frame_14
     originalName: 
-    pivot: {x: 0.68, y: -0.77631575}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -428,7 +428,7 @@ ScriptedImporter:
       y: 641
       width: 100
       height: 76
-    spriteID: 7cb38a3192bbc8e4aad32675670efe87
+    spriteID: 9c5533adf8d24694ab6ab0a5c8779233
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -439,8 +439,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 641}
   - name: Torch_Purple_Frame_15
     originalName: 
-    pivot: {x: 0.72380954, y: -0.80821913}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -449,7 +449,7 @@ ScriptedImporter:
       y: 247
       width: 105
       height: 73
-    spriteID: 1e95d63f43ef8574ea70e130be48bdf4
+    spriteID: 252ad51e61fdbf04b924337013487f92
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -460,8 +460,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 247}
   - name: Torch_Purple_Frame_16
     originalName: 
-    pivot: {x: 0.65, y: -0.6145833}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -470,7 +470,7 @@ ScriptedImporter:
       y: 537
       width: 80
       height: 96
-    spriteID: 24237bb10b476274d95ae3ca02d884d4
+    spriteID: b487c1c412e917f42b90eb2c15d3171f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -481,8 +481,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 537}
   - name: Torch_Purple_Frame_17
     originalName: 
-    pivot: {x: 0.6627907, y: -0.57843137}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -491,7 +491,7 @@ ScriptedImporter:
       y: 229
       width: 86
       height: 102
-    spriteID: 7d658767c9df34f47b097ed9d66cf10c
+    spriteID: e72a7fbefd4f089428e67e93c9600209
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -502,8 +502,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 229}
   - name: Torch_Purple_Frame_18
     originalName: 
-    pivot: {x: 0.67777777, y: -0.5412844}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -512,7 +512,7 @@ ScriptedImporter:
       y: 112
       width: 90
       height: 109
-    spriteID: f85df6cf1399d7345ab68f9c0cc6b152
+    spriteID: 988a2113ce0a78b4da7a16f5a1ed4374
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -523,8 +523,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 112}
   - name: Torch_Purple_Frame_19
     originalName: 
-    pivot: {x: 0.4160584, y: -0.54716986}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -533,7 +533,7 @@ ScriptedImporter:
       y: 118
       width: 137
       height: 106
-    spriteID: e582a4e35dd64424399c7db1621ae680
+    spriteID: 5c68be49589e64b45b206e053db423c0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -544,8 +544,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 118}
   - name: Torch_Purple_Frame_20
     originalName: 
-    pivot: {x: 0.41481486, y: -0.53271025}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -554,7 +554,7 @@ ScriptedImporter:
       y: 232
       width: 135
       height: 107
-    spriteID: 2c663b1cc5406da4eaf7139439e811ba
+    spriteID: 6a6663efe2061fb43b48476b2f838b86
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -565,8 +565,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 232}
   - name: Torch_Purple_Frame_21
     originalName: 
-    pivot: {x: 0.43089432, y: -0.5462963}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -575,7 +575,7 @@ ScriptedImporter:
       y: 585
       width: 123
       height: 108
-    spriteID: 2cb7a05a138bc2744b7d9caafcbdaad6
+    spriteID: 28bffb36238dbed42883384b0e741a46
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -586,8 +586,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 585}
   - name: Torch_Purple_Frame_22
     originalName: 
-    pivot: {x: 0.6202531, y: -0.7375}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -596,7 +596,7 @@ ScriptedImporter:
       y: 608
       width: 79
       height: 80
-    spriteID: 1f3a205398bfc8c47983af4a5f30f18e
+    spriteID: 127ae3e03772baf4badd38e3bc2b7ffd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -607,8 +607,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 608}
   - name: Torch_Purple_Frame_23
     originalName: 
-    pivot: {x: 0.6395349, y: -0.70238096}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -617,7 +617,7 @@ ScriptedImporter:
       y: 328
       width: 86
       height: 84
-    spriteID: bcf1cebae5e43094dbf9b0382f798734
+    spriteID: cf034d74d5228e949a0d7b22db833685
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -628,8 +628,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 328}
   - name: Torch_Purple_Frame_24
     originalName: 
-    pivot: {x: 0.65168536, y: -0.67045456}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -638,7 +638,7 @@ ScriptedImporter:
       y: 441
       width: 89
       height: 88
-    spriteID: dbfe9fe6f39ae2346907d3e25dbd691e
+    spriteID: baf7a097a53e084479e650c37d0cc0ef
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -649,8 +649,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 441}
   - name: Torch_Purple_Frame_25
     originalName: 
-    pivot: {x: 0.50862074, y: -0.2566372}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -659,7 +659,7 @@ ScriptedImporter:
       y: 701
       width: 116
       height: 113
-    spriteID: 88ec44bc27f13c44f8eb0a7379cc5eba
+    spriteID: 606b32150a5bbe948ad63581d0e3858f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -670,8 +670,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 701}
   - name: Torch_Purple_Frame_26
     originalName: 
-    pivot: {x: 0.48739493, y: -0.1965812}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -680,7 +680,7 @@ ScriptedImporter:
       y: 460
       width: 119
       height: 117
-    spriteID: fa52f4d9c1edde14e9b4c35b65b5fea8
+    spriteID: c15b7b72cc5ef304ca73a54f37174a7b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -691,8 +691,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 460}
   - name: Torch_Purple_Frame_27
     originalName: 
-    pivot: {x: 0.39215687, y: -0.26999998}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -701,7 +701,7 @@ ScriptedImporter:
       y: 4
       width: 102
       height: 100
-    spriteID: 55e28d9793497c5459ebc00e623e4f50
+    spriteID: aaed7ff64d4356546825bff359c29e6a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -712,8 +712,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 4}
   - name: Torch_Purple_Frame_28
     originalName: 
-    pivot: {x: 0.30769235, y: -0.78666663}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -722,7 +722,7 @@ ScriptedImporter:
       y: 525
       width: 91
       height: 75
-    spriteID: 22a09be320b28cb4a938eb6487e30c25
+    spriteID: 3f1fa0a2c7309ad40901b268c1817f9b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -733,8 +733,8 @@ ScriptedImporter:
     uvTransform: {x: 262, y: 525}
   - name: Torch_Purple_Frame_29
     originalName: 
-    pivot: {x: 0.32978725, y: -0.4835165}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -743,7 +743,7 @@ ScriptedImporter:
       y: 923
       width: 94
       height: 91
-    spriteID: 0f110df1d0c53da4ab3d19fda59ad8ba
+    spriteID: 01f3dc4de8ea5e0489107c89d7ebac57
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -754,8 +754,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 923}
   - name: Torch_Purple_Frame_30
     originalName: 
-    pivot: {x: 0.34065938, y: -0.43617022}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -764,7 +764,7 @@ ScriptedImporter:
       y: 339
       width: 91
       height: 94
-    spriteID: ae909dab073367a42b110c6f0b97156a
+    spriteID: 9e16dd42468ae9b4c82394a6b1247a92
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -775,8 +775,8 @@ ScriptedImporter:
     uvTransform: {x: 152, y: 339}
   - name: Torch_Purple_Frame_31
     originalName: 
-    pivot: {x: 0.5928571, y: -0.44339624}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -785,7 +785,7 @@ ScriptedImporter:
       y: 4
       width: 140
       height: 106
-    spriteID: 4b7683b97b366db4eb22d17ae6981132
+    spriteID: 95fa973a94b5e224daf813b84bf75964
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -796,8 +796,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Torch_Purple_Frame_32
     originalName: 
-    pivot: {x: 0.6058394, y: -0.4857143}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -806,7 +806,7 @@ ScriptedImporter:
       y: 347
       width: 137
       height: 105
-    spriteID: 45c8d19af58c56246a341f6adf43ebc1
+    spriteID: 5d2cc521a046fff4e8df702b0c9813ed
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -817,8 +817,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 347}
   - name: Torch_Purple_Frame_33
     originalName: 
-    pivot: {x: 0.69827586, y: -0.63440853}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -827,7 +827,7 @@ ScriptedImporter:
       y: 822
       width: 116
       height: 93
-    spriteID: 8db0774942d85fd4cbd9dcf1249d7a76
+    spriteID: 81e170352e2bc9644ab6b62c38f204dc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -853,7 +853,7 @@ ScriptedImporter:
         y: 59
         width: 71
         height: 97
-      spriteId: 736a47585bd95934d913b50d098c3f94
+      spriteId: 1fe3a0b4d540b2442bb7b3fef86f26dd
     - name: Torch_Purple_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -862,7 +862,7 @@ ScriptedImporter:
         y: 59
         width: 77
         height: 97
-      spriteId: 9e58c8952a571de4a8aad2b2a0fbcc95
+      spriteId: c5f4265aca681f64fbc6781c4d692cf7
     - name: Torch_Purple_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -871,7 +871,7 @@ ScriptedImporter:
         y: 59
         width: 75
         height: 98
-      spriteId: e6dd47e2da9247847942420e194934f5
+      spriteId: 62730bc878e20474d96c44656ecfac5b
     - name: Torch_Purple_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -880,7 +880,7 @@ ScriptedImporter:
         y: 59
         width: 74
         height: 79
-      spriteId: 86bb40dfcd25e42468a7bd52af77f4d6
+      spriteId: e36dcb42aebda924b8e646dac4d00e73
     - name: Torch_Purple_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -889,7 +889,7 @@ ScriptedImporter:
         y: 59
         width: 75
         height: 82
-      spriteId: c12f7d7073d82414c81385d8790062ab
+      spriteId: 3c8f4d52382b0e7448b8836ee81c930a
     - name: Torch_Purple_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
@@ -898,7 +898,7 @@ ScriptedImporter:
         y: 59
         width: 74
         height: 83
-      spriteId: ad55be10a6a41b2468d6602f06f15d1a
+      spriteId: 99e837c824bca1a42a6130d4920580cd
     - name: Torch_Purple_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
@@ -907,7 +907,7 @@ ScriptedImporter:
         y: 59
         width: 72
         height: 84
-      spriteId: 6ccd7d086f6c23346b90346079a1e480
+      spriteId: 327df3aa8fc103b4bbc5f61a961fab75
     - name: Torch_Purple_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
@@ -916,7 +916,7 @@ ScriptedImporter:
         y: 59
         width: 71
         height: 86
-      spriteId: 8ee75224efec2b64ab92f975a2e0c2ea
+      spriteId: 2dde18640998794429d6f229fd8c3850
     - name: Torch_Purple_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
@@ -925,7 +925,7 @@ ScriptedImporter:
         y: 59
         width: 71
         height: 88
-      spriteId: 2043b534a626da54b8eaba1797aaf108
+      spriteId: f135d327711c5fa48b68427abd53442f
     - name: Torch_Purple_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
@@ -934,7 +934,7 @@ ScriptedImporter:
         y: 59
         width: 71
         height: 89
-      spriteId: 6c9631880a507fa4ba93d2188a5840f9
+      spriteId: 9af0d4b7604a34543982d6c39485e80e
     - name: Torch_Purple_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
@@ -943,7 +943,7 @@ ScriptedImporter:
         y: 59
         width: 108
         height: 73
-      spriteId: e9822f937f64f184081def01f5ac3f13
+      spriteId: 2078440aeb2e1474d93e836d0b05ce98
     - name: Torch_Purple_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
@@ -952,7 +952,7 @@ ScriptedImporter:
         y: 59
         width: 99
         height: 76
-      spriteId: ebb15613d038f91489a1519d467a8dc9
+      spriteId: d6ffc271cedaaed4a8cc29efdebbda12
     - name: Torch_Purple_Frame_12
       frameIndex: 12
       additiveSortOrder: 0
@@ -961,7 +961,7 @@ ScriptedImporter:
         y: 59
         width: 105
         height: 73
-      spriteId: 44c31d08c8be23244862243a4cf2fc30
+      spriteId: d8a07a57faeec5749b2613afd004474f
     - name: Torch_Purple_Frame_13
       frameIndex: 13
       additiveSortOrder: 0
@@ -970,7 +970,7 @@ ScriptedImporter:
         y: 59
         width: 111
         height: 73
-      spriteId: e78534135333ae34aa5612dc5d7f330e
+      spriteId: db248b11e07756840a424d45ab4672b4
     - name: Torch_Purple_Frame_14
       frameIndex: 14
       additiveSortOrder: 0
@@ -979,7 +979,7 @@ ScriptedImporter:
         y: 59
         width: 100
         height: 76
-      spriteId: 7cb38a3192bbc8e4aad32675670efe87
+      spriteId: 9c5533adf8d24694ab6ab0a5c8779233
     - name: Torch_Purple_Frame_15
       frameIndex: 15
       additiveSortOrder: 0
@@ -988,7 +988,7 @@ ScriptedImporter:
         y: 59
         width: 105
         height: 73
-      spriteId: 1e95d63f43ef8574ea70e130be48bdf4
+      spriteId: 252ad51e61fdbf04b924337013487f92
     - name: Torch_Purple_Frame_16
       frameIndex: 16
       additiveSortOrder: 0
@@ -997,7 +997,7 @@ ScriptedImporter:
         y: 59
         width: 80
         height: 96
-      spriteId: 24237bb10b476274d95ae3ca02d884d4
+      spriteId: b487c1c412e917f42b90eb2c15d3171f
     - name: Torch_Purple_Frame_17
       frameIndex: 17
       additiveSortOrder: 0
@@ -1006,7 +1006,7 @@ ScriptedImporter:
         y: 59
         width: 86
         height: 102
-      spriteId: 7d658767c9df34f47b097ed9d66cf10c
+      spriteId: e72a7fbefd4f089428e67e93c9600209
     - name: Torch_Purple_Frame_18
       frameIndex: 18
       additiveSortOrder: 0
@@ -1015,7 +1015,7 @@ ScriptedImporter:
         y: 59
         width: 90
         height: 109
-      spriteId: f85df6cf1399d7345ab68f9c0cc6b152
+      spriteId: 988a2113ce0a78b4da7a16f5a1ed4374
     - name: Torch_Purple_Frame_19
       frameIndex: 19
       additiveSortOrder: 0
@@ -1024,7 +1024,7 @@ ScriptedImporter:
         y: 58
         width: 137
         height: 106
-      spriteId: e582a4e35dd64424399c7db1621ae680
+      spriteId: 5c68be49589e64b45b206e053db423c0
     - name: Torch_Purple_Frame_20
       frameIndex: 20
       additiveSortOrder: 0
@@ -1033,7 +1033,7 @@ ScriptedImporter:
         y: 57
         width: 135
         height: 107
-      spriteId: 2c663b1cc5406da4eaf7139439e811ba
+      spriteId: 6a6663efe2061fb43b48476b2f838b86
     - name: Torch_Purple_Frame_21
       frameIndex: 21
       additiveSortOrder: 0
@@ -1042,7 +1042,7 @@ ScriptedImporter:
         y: 59
         width: 123
         height: 108
-      spriteId: 2cb7a05a138bc2744b7d9caafcbdaad6
+      spriteId: 28bffb36238dbed42883384b0e741a46
     - name: Torch_Purple_Frame_22
       frameIndex: 22
       additiveSortOrder: 0
@@ -1051,7 +1051,7 @@ ScriptedImporter:
         y: 59
         width: 79
         height: 80
-      spriteId: 1f3a205398bfc8c47983af4a5f30f18e
+      spriteId: 127ae3e03772baf4badd38e3bc2b7ffd
     - name: Torch_Purple_Frame_23
       frameIndex: 23
       additiveSortOrder: 0
@@ -1060,7 +1060,7 @@ ScriptedImporter:
         y: 59
         width: 86
         height: 84
-      spriteId: bcf1cebae5e43094dbf9b0382f798734
+      spriteId: cf034d74d5228e949a0d7b22db833685
     - name: Torch_Purple_Frame_24
       frameIndex: 24
       additiveSortOrder: 0
@@ -1069,7 +1069,7 @@ ScriptedImporter:
         y: 59
         width: 89
         height: 88
-      spriteId: dbfe9fe6f39ae2346907d3e25dbd691e
+      spriteId: baf7a097a53e084479e650c37d0cc0ef
     - name: Torch_Purple_Frame_25
       frameIndex: 25
       additiveSortOrder: 0
@@ -1078,7 +1078,7 @@ ScriptedImporter:
         y: 29
         width: 116
         height: 113
-      spriteId: 88ec44bc27f13c44f8eb0a7379cc5eba
+      spriteId: 606b32150a5bbe948ad63581d0e3858f
     - name: Torch_Purple_Frame_26
       frameIndex: 26
       additiveSortOrder: 0
@@ -1087,7 +1087,7 @@ ScriptedImporter:
         y: 23
         width: 119
         height: 117
-      spriteId: fa52f4d9c1edde14e9b4c35b65b5fea8
+      spriteId: c15b7b72cc5ef304ca73a54f37174a7b
     - name: Torch_Purple_Frame_27
       frameIndex: 27
       additiveSortOrder: 0
@@ -1096,7 +1096,7 @@ ScriptedImporter:
         y: 27
         width: 102
         height: 100
-      spriteId: 55e28d9793497c5459ebc00e623e4f50
+      spriteId: aaed7ff64d4356546825bff359c29e6a
     - name: Torch_Purple_Frame_28
       frameIndex: 28
       additiveSortOrder: 0
@@ -1105,7 +1105,7 @@ ScriptedImporter:
         y: 59
         width: 91
         height: 75
-      spriteId: 22a09be320b28cb4a938eb6487e30c25
+      spriteId: 3f1fa0a2c7309ad40901b268c1817f9b
     - name: Torch_Purple_Frame_29
       frameIndex: 29
       additiveSortOrder: 0
@@ -1114,7 +1114,7 @@ ScriptedImporter:
         y: 44
         width: 94
         height: 91
-      spriteId: 0f110df1d0c53da4ab3d19fda59ad8ba
+      spriteId: 01f3dc4de8ea5e0489107c89d7ebac57
     - name: Torch_Purple_Frame_30
       frameIndex: 30
       additiveSortOrder: 0
@@ -1123,7 +1123,7 @@ ScriptedImporter:
         y: 41
         width: 91
         height: 94
-      spriteId: ae909dab073367a42b110c6f0b97156a
+      spriteId: 9e16dd42468ae9b4c82394a6b1247a92
     - name: Torch_Purple_Frame_31
       frameIndex: 31
       additiveSortOrder: 0
@@ -1132,7 +1132,7 @@ ScriptedImporter:
         y: 47
         width: 140
         height: 106
-      spriteId: 4b7683b97b366db4eb22d17ae6981132
+      spriteId: 95fa973a94b5e224daf813b84bf75964
     - name: Torch_Purple_Frame_32
       frameIndex: 32
       additiveSortOrder: 0
@@ -1141,7 +1141,7 @@ ScriptedImporter:
         y: 51
         width: 137
         height: 105
-      spriteId: 45c8d19af58c56246a341f6adf43ebc1
+      spriteId: 5d2cc521a046fff4e8df702b0c9813ed
     - name: Torch_Purple_Frame_33
       frameIndex: 33
       additiveSortOrder: 0
@@ -1150,7 +1150,7 @@ ScriptedImporter:
         y: 59
         width: 116
         height: 93
-      spriteId: 8db0774942d85fd4cbd9dcf1249d7a76
+      spriteId: 81e170352e2bc9644ab6b62c38f204dc
     linkedCells: []
     parentIndex: -1
   platformSettings: []
