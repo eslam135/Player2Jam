@@ -59,12 +59,15 @@ namespace player2_sdk
 
     public class NpcManager : MonoBehaviour
     {
+
         [Header("Config")] [SerializeField] public string gameId = "your-game-id";
 
         private Player2NpcResponseListener _responseListener;
 
         [Header("Functions")] [SerializeField] public List<Function> functions;
         [SerializeField] public UnityEvent<FunctionCall> functionHandler;
+
+        [SerializeField] private GameObject chat;
 
         public readonly JsonSerializerSettings JsonSerializerSettings = new JsonSerializerSettings
         {
@@ -140,6 +143,7 @@ namespace player2_sdk
                     if (!string.IsNullOrEmpty(response.message))
                     {
                         Debug.Log($"Updating UI for NPC {id}: {response.message}");
+                        chat.SetActive(true);
                         onNpcResponse.text = response.message;
                     }
 
