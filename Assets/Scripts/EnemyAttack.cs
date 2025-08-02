@@ -1,31 +1,42 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
 
 public class EnemyAttack : MonoBehaviour
 {
-    [SerializeField] public int damage = 1;
-
+    [SerializeField] private int damage = 1;
     [SerializeField] private Transform attackPoint;
-    [SerializeField] private float weaponRange;
+    [SerializeField] private float weaponRange = 1f;
     [SerializeField] private LayerMask playerLayer;
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    // Called by an Animation Event at the exact swing frame
+    public void Attack()
     {
-        if (collision.gameObject.tag == "Player")
+        StartCoroutine(AttackWithDelay());
+    }
+    
+    private IEnumerator AttackWithDelay()
+    {
+        
+        Collider2D[] hits = Physics2D.OverlapCircleAll(
+            attackPoint.position, 
+            weaponRange, 
+            playerLayer
+        );
+
+        foreach (var hit in hits)
         {
-            collision.gameObject.GetComponent<HealthSys>().ChangeHealth(-damage);
+            var health = hit.GetComponent<HealthSys>();
+            if (health != null)
+                health.ChangeHealth(-damage);
+                yield return new WaitForSeconds(1f);
         }
     }
 
-
-    public void Attack()
+    // (Optional) visualize range in editor
+    private void OnDrawGizmosSelected()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, weaponRange, playerLayer);
-
-        if(hits.Length > 0 )
-        {
-            hits[0].GetComponent<HealthSys>().ChangeHealth(-damage); 
-        }
+        if (attackPoint == null) return;
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, weaponRange);
     }
 }

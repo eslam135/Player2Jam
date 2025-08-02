@@ -112878,13 +112878,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1266590039156458751, guid: 896be75c7709c6243bdca4cf7c2b7cf6, type: 3}
+      propertyPath: hitPoint
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266590039156458751, guid: 896be75c7709c6243bdca4cf7c2b7cf6, type: 3}
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1249661686}
     - target: {fileID: 1266590039156458751, guid: 896be75c7709c6243bdca4cf7c2b7cf6, type: 3}
+      propertyPath: invulDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266590039156458751, guid: 896be75c7709c6243bdca4cf7c2b7cf6, type: 3}
       propertyPath: currentHealthBar
       value: 
       objectReference: {fileID: 1372953870}
+    - target: {fileID: 6601192028168762236, guid: 896be75c7709c6243bdca4cf7c2b7cf6, type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 7202897748652236057, guid: 896be75c7709c6243bdca4cf7c2b7cf6, type: 3}
       propertyPath: m_Name
       value: Player

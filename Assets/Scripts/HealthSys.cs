@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using System.Collections;
 
 [RequireComponent(typeof(Animator), typeof(AudioSource))]
 public class HealthSys : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] private Image currentHealthBar; // Image that we will shift
+    [SerializeField] private Image currentHealthBar;
     [SerializeField] private Text healthText;
 
     [Header("Health")]
@@ -37,31 +36,39 @@ public class HealthSys : MonoBehaviour
         UpdateHealthBar();
     }
 
-    private void Start()
-    {
-        UpdateHealthBar();
-    }
-
     /// <summary>
-    /// Call this to change health by + or - amount. Negative = damage, Positive = heal.
+    /// Change health by + or - amount.
+    /// Negative = damage, Positive = heal.
     /// </summary>
     public void ChangeHealth(int amount)
     {
-        if (isDying) return;
-        if (amount < 0 && isInvulnerable) return;
+        if (isDying)
+            return;
 
-        hitPoint += amount;
-        hitPoint = Mathf.Clamp(hitPoint, 0, maxHitPoint);
+        // Prevent effects while invulnerable
+        if (amount < 0 && isInvulnerable)
+        {
+            Debug.Log("Damage prevented: currently invulnerable");
+            return;
+        }
 
-        UpdateHealthBar();
+        int oldHP = hitPoint;
+        hitPoint = Mathf.Clamp(hitPoint + amount, 0, maxHitPoint);
 
-        if (amount < 0)
+        // Update UI only if health changed
+        if (hitPoint != oldHP)
+            UpdateHealthBar();
+
+        // Trigger damage feedback if we actually took damage
+        if (amount < 0 && hitPoint < oldHP)
         {
             anim.SetTrigger(HashDamage);
+            PlayDamageSound();
             StartCoroutine(DamageCooldown());
         }
 
-        if (hitPoint <= 0)
+        // Handle death
+        if (hitPoint <= 0 && !isDying)
         {
             Die();
         }
@@ -70,7 +77,6 @@ public class HealthSys : MonoBehaviour
     private void UpdateHealthBar()
     {
         float ratio = (float)hitPoint / maxHitPoint;
-
         if (currentHealthBar != null)
         {
             float fullWidth = currentHealthBar.rectTransform.rect.width;
@@ -79,7 +85,7 @@ public class HealthSys : MonoBehaviour
 
         if (healthText != null)
         {
-            healthText.text = hitPoint.ToString("0") + " / " + maxHitPoint.ToString("0");
+            healthText.text = $"{hitPoint:0} / {maxHitPoint:0}";
         }
     }
 
@@ -92,32 +98,35 @@ public class HealthSys : MonoBehaviour
 
     private void Die()
     {
-        if (isDying) return;
-
         isDying = true;
         anim.SetTrigger(HashDeath);
-        // Death animation will call FinalizeDeath() via animation event
+        PlayDeathSound();
+        // FinalizeDeath will be called by animation event at end of death clip
     }
 
+    /// <summary>
+    /// Called by animation event at end of death animation
+    /// </summary>
     public void FinalizeDeath()
     {
         Destroy(gameObject);
     }
 
-    // These should be called via Animation Events
+    /// <summary>
+    /// Called by animation event during damage animation
+    /// </summary>
     public void PlayDamageSound()
     {
         if (damageTakenSound != null)
-        {
             audioSource.PlayOneShot(damageTakenSound);
-        }
     }
 
+    /// <summary>
+    /// Called by animation event during death animation
+    /// </summary>
     public void PlayDeathSound()
     {
         if (deathSound != null)
-        {
             audioSource.PlayOneShot(deathSound);
-        }
     }
 }
