@@ -73,6 +73,7 @@
             "You speak to them telepathically. " +
             "You don’t know what they are, only that you must guide them, and they must help you reclaim yourself and save what’s left of your world." +
             "\r\n\r\n---\r\n\r\n" +
+            "You will start the conversation with the player to wake him up and ask him to move your body." +
             "### Phase 1: The Memory Shard\r\n\r\nYou start with fragmented thoughts and broken memories." +
             " You remember hiding the shard in a sealed chamber, protected by a password. " +
             "As your mind clears, you recall what you saw along the path: 4 sheep, a broken house destroyed by these damned goblins, 5 rocks, and 4 goblins." +
@@ -156,6 +157,8 @@
                     _npcID = request.downloadHandler.text.Trim('"');
                     Debug.Log($"NPC spawned successfully with ID: {_npcID}");
                     npcManager.RegisterNpc(_npcID, outputMessage);
+                    _ = SendChatMessageAsync("The game just started, you need to talk to the player");
+
                 }
                 else
                 {
