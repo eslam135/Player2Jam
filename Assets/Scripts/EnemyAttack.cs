@@ -14,7 +14,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<HealthSys>().changeHealth(-damage);
+            collision.gameObject.GetComponent<HealthSys>().ChangeHealth(-damage);
         }
     }
 
@@ -25,7 +25,7 @@ public class EnemyAttack : MonoBehaviour
 
         if(hits.Length > 0 )
         {
-            hits[0].GetComponent<HealthSys>().changeHealth(-damage); 
+            hits[0].GetComponent<HealthSys>().ChangeHealth(-damage); 
         }
     }
 }
