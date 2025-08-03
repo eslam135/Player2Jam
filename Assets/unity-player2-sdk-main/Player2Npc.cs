@@ -158,7 +158,6 @@
                     Debug.Log($"NPC spawned successfully with ID: {_npcID}");
                     npcManager.RegisterNpc(_npcID, outputMessage);
                     _ = SendChatMessageAsync("The game just started, you need to talk to the player");
-
                 }
                 else
                 {

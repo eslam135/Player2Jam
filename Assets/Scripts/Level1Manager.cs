@@ -9,7 +9,8 @@ public class Level1Manager : MonoBehaviour
     [SerializeField] private TMP_InputField[] passwordFields;
     [SerializeField] private TMP_Text result;
     [SerializeField] private Player2Npc npc;
-    private bool nearHouse; 
+    private bool nearHouse;
+    private bool finishedTask;
     public static bool inText;
     readonly private string password = "4154";
     private void Start()
@@ -46,6 +47,7 @@ public class Level1Manager : MonoBehaviour
             result.text = "Congratulations! you got it right";
             passwordParent.SetActive(false);
             _ = npc.SendChatMessageAsync("The player just entered the correct password and found the memory fragment finishing phase 1");
+            finishedTask = true;
         }
         else
         {
@@ -56,20 +58,26 @@ public class Level1Manager : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (!finishedTask)
         {
-            textField.SetActive(true);
-            nearHouse = true;
+            if (collision.gameObject.tag == "Player")
+            {
+                textField.SetActive(true);
+                nearHouse = true;
+            }
         }
     }
 
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (!finishedTask)
         {
-            textField.SetActive(false);
-            nearHouse = false;
+            if (collision.gameObject.tag == "Player")
+            {
+                textField.SetActive(false);
+                nearHouse = false;
+            }
         }
     }
 }
