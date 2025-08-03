@@ -123,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
         if (swipe1 != null)
             audioSource.PlayOneShot(swipe1);
 
-        yield return null;  // wait a frame for the state to apply
+        yield return null;  // wait a frame
         float len1 = anim.GetCurrentAnimatorStateInfo(0).length / anim.speed;
         yield return new WaitForSeconds(len1);
 
@@ -151,4 +151,9 @@ public class PlayerMovement : MonoBehaviour
         // done
         isAttacking = false;
     }
+
+    // Exposed for AttackTrigger:
+    public int GetFacing() => facing;
+    public bool IsAttacking() => isAttacking;
+    public Vector2 GetAttackDirection() => attackDir;
 }
