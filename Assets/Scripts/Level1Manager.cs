@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Level1Manager : MonoBehaviour
 {
-    [SerializeField] private GameObject textField;
+    [SerializeField] private TMP_Text textField;
     [SerializeField] private GameObject passwordParent;
     [SerializeField] private TMP_InputField[] passwordFields;
     [SerializeField] private TMP_Text result;
@@ -15,7 +15,7 @@ public class Level1Manager : MonoBehaviour
     readonly private string password = "4154";
     private void Start()
     {
-        textField.SetActive(false);
+        textField.text = "";
     }
 
     private void Update()
@@ -48,6 +48,7 @@ public class Level1Manager : MonoBehaviour
             passwordParent.SetActive(false);
             _ = npc.SendChatMessageAsync("The player just entered the correct password and found the memory fragment finishing phase 1");
             finishedTask = true;
+            GameManager.Instance.ChangeState(GameState.Level2);
         }
         else
         {
@@ -62,7 +63,7 @@ public class Level1Manager : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                textField.SetActive(true);
+                textField.text = "Press E";
                 nearHouse = true;
             }
         }
@@ -75,7 +76,7 @@ public class Level1Manager : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                textField.SetActive(false);
+                textField.text = "";
                 nearHouse = false;
             }
         }

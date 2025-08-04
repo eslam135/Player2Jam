@@ -1,12 +1,13 @@
 namespace player2_sdk
 {
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Serialization;
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using TMPro;
     using UnityEngine;
     using UnityEngine.Events;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Serialization;
     using UnityEngine.Serialization;
 
     [Serializable]
@@ -144,7 +145,7 @@ namespace player2_sdk
                     {
                         Debug.Log($"Updating UI for NPC {id}: {response.message}");
                         chat.SetActive(true);
-                        onNpcResponse.text = response.message;
+                        StartCoroutine(TypeText(onNpcResponse,response.message, 0.02f));
                     }
 
 
@@ -169,7 +170,15 @@ namespace player2_sdk
                 _responseListener.StartListening();
             }
         }
-
+        private IEnumerator TypeText(TMP_Text tmpText, string text, float charDelay)
+        {
+            tmpText.text = "";
+            foreach (char c in text)
+            {
+                tmpText.text += c;
+                yield return new WaitForSeconds(charDelay);
+            }
+        }
         public void UnregisterNpc(string id)
         {
             if (_responseListener != null)
