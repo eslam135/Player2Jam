@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public bool isTalking;
 
     [SerializeField] private Player2Npc npc;
     [SerializeField] private GameObject npcChat;
@@ -33,10 +34,12 @@ public class GameManager : MonoBehaviour
         }
         if (npcChat.activeInHierarchy)
         {
+            isTalking = true;
             playerInput.DeactivateInput();
         }
         else
         {
+            isTalking= false;
             playerInput.ActivateInput();
         }
     }

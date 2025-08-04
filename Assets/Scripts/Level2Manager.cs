@@ -11,7 +11,9 @@ public class Level2Manager : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
+        if (GameManager.Instance.isTalking) return;
+
+            timer += Time.deltaTime;
 
         if (timer >= spawnInterval)
         {
