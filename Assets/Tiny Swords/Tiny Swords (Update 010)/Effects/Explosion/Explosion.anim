@@ -105,7 +105,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.89
-    functionName: FinalizeDeath
+    functionName: OnDeathAnimationFinished
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
