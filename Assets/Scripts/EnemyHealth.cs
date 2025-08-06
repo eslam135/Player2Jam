@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 [RequireComponent(typeof(Animator), typeof(AudioSource))]
 public class EnemyHealth : MonoBehaviour
@@ -53,8 +53,8 @@ public class EnemyHealth : MonoBehaviour
         }
 
         // Disable movement/attack scripts
-        if (TryGetComponent<Enemy_Movement>(out var move)) move.enabled = false;
-        if (TryGetComponent<EnemyAttack>(out var atk)) atk.enabled = false;
+        if (TryGetComponent<Enemy_Movement>(out var move))  move.enabled = false;
+        if (TryGetComponent<EnemyAttack>(out var atk))      atk.enabled = false;
     }
 
     /// <summary>

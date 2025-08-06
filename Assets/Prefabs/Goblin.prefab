@@ -363,6 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  deathClip: {fileID: 8300000, guid: e7963e0734540ad41839c937ebbb90e1, type: 3}
 --- !u!1 &5928434875350770369
 GameObject:
   m_ObjectHideFlags: 0

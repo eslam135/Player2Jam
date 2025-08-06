@@ -1609,6 +1609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  deathClip: {fileID: 0}
 --- !u!82 &520635021
 AudioSource:
   m_ObjectHideFlags: 0
@@ -114308,19 +114309,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5846178557423421166, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
   m_PrefabInstance: {fileID: 2335950279420926832}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1550066751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550066742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6282decbfbcf83b4095aedc2552fed71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
 --- !u!82 &1550066752
 AudioSource:
   m_ObjectHideFlags: 0
@@ -115216,6 +115204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  deathClip: {fileID: 0}
 --- !u!82 &1790403579
 AudioSource:
   m_ObjectHideFlags: 0
@@ -115887,6 +115876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  deathClip: {fileID: 0}
 --- !u!82 &2005583707
 AudioSource:
   m_ObjectHideFlags: 0
@@ -116280,6 +116270,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8500909525522251392, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8600189105554872568, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -116307,9 +116301,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 169041807}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5846178557423421166, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1550066751}
     - targetCorrespondingSourceObject: {fileID: 5846178557423421166, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1550066752}
@@ -116343,6 +116334,10 @@ PrefabInstance:
     - target: {fileID: 2489862318861465951, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661652813957433857, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5401609952333710860, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
       propertyPath: m_LocalPosition.x
@@ -116384,6 +116379,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8895947158652431983, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
+      propertyPath: skillClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 03bfba4197f75644691f3b4172580725, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
