@@ -16,10 +16,12 @@ public class Level1Manager : MonoBehaviour
     private void Start()
     {
         textField.text = "";
+
     }
 
     private void Update()
     {
+
         if (Input.GetKeyUp(KeyCode.E))
         {
             if (nearHouse)
@@ -46,7 +48,7 @@ public class Level1Manager : MonoBehaviour
             result.color = Color.green;
             result.text = "Congratulations! you got it right";
             passwordParent.SetActive(false);
-            _ = npc.SendChatMessageAsync("The player just entered the correct password and found the memory fragment finishing phase 1");
+            _ = npc.SendChatMessageAsync("This is a system message: The player just entered the correct password and found the memory fragment finishing phase 1");
             finishedTask = true;
             GameManager.Instance.ChangeState(GameState.Level2);
         }

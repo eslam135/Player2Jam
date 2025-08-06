@@ -149,7 +149,8 @@ namespace player2_sdk
                     {
                         Debug.Log($"Updating UI for NPC {id}: {response.message}");
                         chat.SetActive(true);
-                        StartCoroutine(TypeText(onNpcResponse,response.message, 0.02f));
+                        //StartCoroutine(TypeText(onNpcResponse,response.message, 0.02f));
+                        onNpcResponse.text = response.message;
                     }
 
 

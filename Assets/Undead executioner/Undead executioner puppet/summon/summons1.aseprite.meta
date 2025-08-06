@@ -124,8 +124,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: summons1_Frame_0
     originalName: 
-    pivot: {x: 0.6, y: -0.59999996}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -145,8 +145,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: summons1_Frame_1
     originalName: 
-    pivot: {x: 0.6, y: -0.59999996}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -166,8 +166,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 32}
   - name: summons1_Frame_2
     originalName: 
-    pivot: {x: 0.6, y: -0.59999996}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -187,8 +187,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 60}
   - name: summons1_Frame_3
     originalName: 
-    pivot: {x: 0.6, y: -0.59999996}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -208,8 +208,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 88}
   - name: summons1_Frame_4
     originalName: 
-    pivot: {x: 0.6, y: -0.59999996}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -229,8 +229,8 @@ ScriptedImporter:
     uvTransform: {x: 22, y: 4}
   - name: summons1_Frame_5
     originalName: 
-    pivot: {x: 0.6, y: -0.79999995}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -250,8 +250,8 @@ ScriptedImporter:
     uvTransform: {x: 22, y: 60}
   - name: summons1_Frame_6
     originalName: 
-    pivot: {x: 0.6, y: -0.79999995}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -271,8 +271,8 @@ ScriptedImporter:
     uvTransform: {x: 22, y: 83}
   - name: summons1_Frame_7
     originalName: 
-    pivot: {x: 0.62499994, y: -1.5}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -292,8 +292,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 116}
   - name: summons1_Frame_8
     originalName: 
-    pivot: {x: 0.62499994, y: -1.5}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -313,8 +313,8 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 26}
   - name: summons1_Frame_9
     originalName: 
-    pivot: {x: 0.66666675, y: -2.1666665}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -334,8 +334,8 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 74}
   - name: summons1_Frame_10
     originalName: 
-    pivot: {x: 0.6, y: -0.59999996}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -355,8 +355,8 @@ ScriptedImporter:
     uvTransform: {x: 22, y: 32}
   - name: summons1_Frame_11
     originalName: 
-    pivot: {x: 0.75, y: -0.77777773}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -376,8 +376,8 @@ ScriptedImporter:
     uvTransform: {x: 22, y: 106}
   - name: summons1_Frame_12
     originalName: 
-    pivot: {x: 0.50000006, y: -1.2857143}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -397,8 +397,8 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 4}
   - name: summons1_Frame_13
     originalName: 
-    pivot: {x: 0.5, y: -2.5555556}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
@@ -418,8 +418,8 @@ ScriptedImporter:
     uvTransform: {x: 40, y: 42}
   - name: summons1_Frame_14
     originalName: 
-    pivot: {x: 0.66666675, y: -3.5714285}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:

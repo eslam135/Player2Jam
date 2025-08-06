@@ -253,6 +253,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  proximityRadius: 5
+  proximityDamage: 10
 --- !u!82 &2053802846779772190
 AudioSource:
   m_ObjectHideFlags: 0
@@ -364,6 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   deathClip: {fileID: 8300000, guid: e7963e0734540ad41839c937ebbb90e1, type: 3}
+  fragment: {fileID: 5253268937426068057, guid: 44733774b1c379941957981e6be95307, type: 3}
 --- !u!1 &5928434875350770369
 GameObject:
   m_ObjectHideFlags: 0

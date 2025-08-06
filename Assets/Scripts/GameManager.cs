@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     public bool isTalking;
 
     [SerializeField] private Player2Npc npc;
-    [SerializeField] private GameObject npcChat;
+    [SerializeField] private GameObject[] npcChats;
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private GameObject[] levels;
-    private GameState currentState = GameState.Level1;
+    [SerializeField] private GameState currentState = GameState.Level1;
 
     private void Awake()
     {
@@ -23,23 +23,28 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject); 
-    }
+        DontDestroyOnLoad(gameObject);
 
-    private void Update()
-    {
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i].SetActive(i == (int)currentState);
         }
-        if (npcChat.activeInHierarchy)
+
+    }
+
+    private void Update()
+    {
+
+        for (int i = 0; i < levels.Length; i++)
         {
-            isTalking = true;
+            levels[i].SetActive(i == (int)currentState);
+        }
+        if (isTalking)
+        {
             playerInput.DeactivateInput();
         }
         else
         {
-            isTalking= false;
             playerInput.ActivateInput();
         }
     }
@@ -47,11 +52,16 @@ public class GameManager : MonoBehaviour
     public void OnCloseButtonPress(GameObject obj)
     {
         obj.SetActive(false);
+        isTalking = false;
     }
 
     public void ChangeState(GameState state)
     {
         currentState = state;
+    }
+    public GameState getCurrState()
+    {
+        return currentState;
     }
 }
 
@@ -59,5 +69,6 @@ public enum GameState
 {
     Level1,
     Level2,
-    Level3
+    Level3,
+    Level4,
 }

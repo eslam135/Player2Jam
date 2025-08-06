@@ -1,24 +1,44 @@
+using player2_sdk;
 using UnityEngine;
 
 public class Level2Manager : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab; 
+    [SerializeField] private GameObject enemyPrefab;
+    private Transform enemyParent;
     [SerializeField] private float minSpawnDistance = 2.5f;
     [SerializeField] private float maxSpawnDistance = 5f;
     [SerializeField] private float spawnInterval = 0.8f;
+    [SerializeField] private Player2Npc Kael;
+    public static int foundFragments = 0;
 
     private float timer;
+
+    private void Start()
+    {
+        GameObject parentObj = new GameObject("Enemies");
+        enemyParent = parentObj.transform;
+    }
+
 
     private void Update()
     {
         if (GameManager.Instance.isTalking) return;
 
+        if (foundFragments < 3)
+        {
             timer += Time.deltaTime;
 
-        if (timer >= spawnInterval)
+            if (timer >= spawnInterval)
+            {
+                timer = 0f;
+                SpawnRandomEnemy();
+            }
+        }
+        else
         {
-            timer = 0f;
-            SpawnRandomEnemy();
+            Destroy(enemyParent.gameObject);
+            _ = Kael.SendChatMessageAsync("This is a system message: you and the player just collected all the three fragments");
+            GameManager.Instance.ChangeState(GameState.Level3);
         }
     }
 
@@ -39,7 +59,7 @@ public class Level2Manager : MonoBehaviour
 
         Vector2 spawnPos = GetRandomPositionAround(player.transform.position, minSpawnDistance, maxSpawnDistance);
 
-        Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        Instantiate(enemyPrefab, spawnPos, Quaternion.identity, enemyParent.transform);
     }
 
     private Vector2 GetRandomPositionAround(Vector2 center, float minDist, float maxDist)
@@ -50,4 +70,5 @@ public class Level2Manager : MonoBehaviour
         float y = center.y + Mathf.Sin(angle) * radius;
         return new Vector2(x, y);
     }
+
 }

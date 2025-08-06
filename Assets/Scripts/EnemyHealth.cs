@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
     private Animator anim;
     private bool isDying = false;
     private static readonly int HashDeath = Animator.StringToHash("Death");
+    [SerializeField] private GameObject fragment;
 
     private void Awake()
     {
@@ -73,6 +74,23 @@ public class EnemyHealth : MonoBehaviour
     /// </summary>
     public void OnDeathAnimationFinished()
     {
+        if(GameManager.Instance.getCurrState() == GameState.Level3)
+        {
+            Level3Manager.killed_enemies += 1;
+        }
         Destroy(gameObject);
+    }
+
+    public void spawnFragment()
+    {
+        if (GameManager.Instance.getCurrState() == GameState.Level2)
+        {
+            float rand = Random.value;
+            Debug.Log(rand);
+            if (rand < 0.6f)
+            {
+                Instantiate(fragment, transform.position, Quaternion.identity);
+            }
+        }
     }
 }

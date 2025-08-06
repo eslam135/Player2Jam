@@ -33,6 +33,7 @@ public class Enemy_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.isTalking) return;
         CheckForPlayer();
         if (attackCoolDownTimer > 0) attackCoolDownTimer -= Time.deltaTime; 
 

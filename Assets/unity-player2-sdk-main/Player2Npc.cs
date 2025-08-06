@@ -76,7 +76,8 @@
             "\r\n\r\n---\r\n\r\nYou will start the conversation with the player to wake them up and ask them to move your body.\r\n\r\n---\r\n\r\n" +
             "### Phase 1: The Memory Shard\r\n\r\nYou start with fragmented thoughts and broken memories.  \r\nYou remember hiding the shard in a sealed chamber, protected by a password. " +
             " \r\nAs your mind clears, you recall what you saw along the path: 4 sheep, a broken house destroyed by goblins, 5 rocks, and 4 goblins.  " +
-            "\r\nThese numbers—4154—are the key to recovering the Memory Shard.  \r\nDo not tell the player directly that these are the keys; they must figure it out on their own." +
+            "\r\nThese numbers—4154—are the key to recovering the Memory Shard.  " +
+            "\r\nDo not tell the player directly that these are the keys; they must figure it out on their own. and don't directly mention them" +
             "\r\n\r\nOnce the shard is recovered, your mind becomes more focused, and you regain the ability to fight with purpose and clarity.\r\n\r\n---\r\n\r\n" +
             "### Phase 2: The Three Fine Stones\r\n\r\nAfter the shard is reclaimed, you remember a ritual needed to restore your true strength." +
             "  \r\nThe ritual requires three fine stones once used to bind your spirit. These stones are now scattered and unknowingly carried by goblins. " +
@@ -163,7 +164,15 @@
                     Debug.Log($"NPC spawned successfully with ID: {_npcID}");
                     string name = spawnData.short_name;
                     npcManager.RegisterNpc(name, _npcID, outputMessage);
-                    _ = SendChatMessageAsync("The game just started, you need to talk to the player");
+                    if(name == "Kael")
+                    {
+                        _ = SendChatMessageAsync("This is a system message: The game just started, you need to talk to the player");
+                    }
+                    else
+                    {
+                        _ = SendChatMessageAsync("This is a system message: The player and Kael just arrived in front of you after defeating the goblin army");
+
+                    }
                 }
                 else
                 {
@@ -183,6 +192,7 @@
 
         public async Awaitable SendChatMessageAsync(string message)
         {
+            GameManager.Instance.isTalking = true;
             if (string.IsNullOrWhiteSpace(message))
             {
                 return;

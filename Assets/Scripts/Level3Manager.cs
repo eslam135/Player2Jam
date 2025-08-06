@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using player2_sdk;
 
 public class Level3Manager : MonoBehaviour
 {
@@ -7,18 +8,27 @@ public class Level3Manager : MonoBehaviour
     [SerializeField] private float minSpawnDistance = 2.5f;
     [SerializeField] private float maxSpawnDistance = 5f;
     [SerializeField] private float spawnInterval = 0.3f;      
-    [SerializeField] private float waveInterval = 4f;          
-
+    [SerializeField] private float waveInterval = 4f;
+    [SerializeField] private Player2Npc Kael;
     private int totalToSpawn;
     private int totalSpawned = 0;
     private int waveNumber = 1;
 
     private bool isSpawning = false;
 
+    public static int killed_enemies = 0;
     private void Start()
     {
-        totalToSpawn = Random.Range(90, 121);  
+        totalToSpawn = Random.Range(10, 20);  
         StartCoroutine(SpawnWaves());
+    }
+    private void Update()
+    {
+        if (killed_enemies == totalToSpawn)
+        {
+            _ = Kael.SendChatMessageAsync("This is a system message: you and the player just defeated the goblin army and moving to the next stage");
+            GameManager.Instance.ChangeState(GameState.Level4);
+        }
     }
 
     private IEnumerator SpawnWaves()

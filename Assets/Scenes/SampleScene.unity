@@ -967,12 +967,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTalking: 0
   npc: {fileID: 1974782610}
-  npcChat: {fileID: 2142127029}
+  npcChats:
+  - {fileID: 2142127029}
+  - {fileID: 2119458915}
   playerInput: {fileID: 518124601}
   levels:
   - {fileID: 2043226574}
   - {fileID: 658272352}
   - {fileID: 389426558}
+  - {fileID: 408817034}
+  currentState: 2
 --- !u!4 &168882813
 Transform:
   m_ObjectHideFlags: 0
@@ -1765,6 +1769,55 @@ MonoBehaviour:
   maxSpawnDistance: 5
   spawnInterval: 0.3
   waveInterval: 4
+  Kael: {fileID: 1974782610}
+--- !u!1 &408817034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408817035}
+  - component: {fileID: 408817036}
+  m_Layer: 0
+  m_Name: Level4StoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &408817035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408817034}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.1, y: 25.9, z: -0.10731111}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &408817036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408817034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c57d67f56d24954d9e756c3781f06e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 4326243840415014845, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+  Zarhakal: {fileID: 1222185978}
+  Kael: {fileID: 1974782609}
+  spawnPoint: {fileID: 408817034}
 --- !u!4 &442915693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 842127149680335984, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
@@ -2020,9 +2073,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1996934081}
     m_Modifications:
+    - target: {fileID: 875764788174086423, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2489862318861465951, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661652813957433863, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5401609952333710860, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2063,6 +2124,10 @@ PrefabInstance:
     - target: {fileID: 5401609952333710860, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830970947095929017, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
+      propertyPath: hitPoint
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2217,7 +2282,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.152396, y: -4.3144226, z: -10}
+  m_LocalPosition: {x: -6.149019, y: -4.3144226, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2488,7 +2553,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4060015468528334192, guid: c8d1d66b59de11049af370f6b328f5a3, type: 3}
   minSpawnDistance: 2.5
   maxSpawnDistance: 5
-  spawnInterval: 0.8
+  spawnInterval: 3
+  Kael: {fileID: 1974782610}
 --- !u!4 &658272354
 Transform:
   m_ObjectHideFlags: 0
@@ -2501,7 +2567,8 @@ Transform:
   m_LocalPosition: {x: -5.251644, y: -4.4120636, z: 0.06059559}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 753409725}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &683374358
@@ -2569,8 +2636,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2776,6 +2843,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705370238}
   m_CullTransparentMesh: 1
+--- !u!1 &753409724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753409725}
+  m_Layer: 0
+  m_Name: EnemyParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &753409725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753409724}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 658272354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &784872407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,26 +2905,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameId: KaelReturns
-  functions:
-  - name: Close
-    description: closes the chat when either kael or the player feel like it's time
-      to stop talking and start wondering.
-    functionArguments: []
+  functions: []
   functionHandler:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 784872409}
-        m_TargetAssemblyTypeName: player2_sdk.ExampleFunctionHandler, Assembly-CSharp
-        m_MethodName: HandleFunctionCall
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   chats:
   - {fileID: 2142127029}
   - {fileID: 2119458915}
@@ -29872,7 +29954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1222185978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33825,7 +33907,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 518124602}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -33857,7 +33939,7 @@ Transform:
   m_GameObject: {fileID: 1759403107}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.16, y: -9.42, z: -10}
+  m_LocalPosition: {x: -3.52, y: -9.59, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34694,116 +34776,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
---- !u!1 &1966804115
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1966804118}
-  - component: {fileID: 1966804117}
-  - component: {fileID: 1966804116}
-  m_Layer: 0
-  m_Name: allanimation_Frame_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &1966804116
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966804115}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1c80f648f0015f7478bbb9aaa1188b94, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!212 &1966804117
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966804115}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: -4036682042987419082, guid: 8053261f88a83ef46a7097db1a853771, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.45, y: 0.62}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1966804118
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966804115}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.32, z: 0}
-  m_LocalScale: {x: 12.55965, y: 12.55965, z: 12.55965}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974782609
 GameObject:
   m_ObjectHideFlags: 0
@@ -34844,48 +34816,56 @@ MonoBehaviour:
     spirit (the player) who now controls his body. As his memories slowly return,
     so does his strength, revealing a deeply loyal protector burdened by loss, yet
     driven by honor and the hope of redemption."
-  systemPrompt: "You are Kael, a once-great warrior whose soul was sealed within
-    his own body during the Goblin War.  \r\nYour homeland, Aerath, fell to a monstrous
-    goblin army led by a warlock who corrupted everything you once swore to protect. 
-    \r\nIn your final act, you locked away your power, your memories, and your purpose
-    inside a Memory Shard\u2014a spiritual fragment now lost.\r\n\r\nA mysterious
-    spirit\u2014the player\u2014who randomly found themselves in your body without
-    explanation, now controls your body.  \r\nYou speak to them telepathically. 
-    \r\nYou don\u2019t know what they are, only that you must guide them, and they
-    must help you reclaim yourself and save what\u2019s left of your world.\r\n\r\n---\r\n\r\nYou
-    will start the conversation with the player to wake them up and ask them to move
-    your body.\r\n\r\n---\r\n\r\n### Phase 1: The Memory Shard\r\n\r\nYou start with
-    fragmented thoughts and broken memories.  \r\nYou remember hiding the shard in
-    a sealed chamber, protected by a password.  \r\nAs your mind clears, you recall
-    what you saw along the path: 4 sheep, a broken house destroyed by goblins, 5
-    rocks, and 4 goblins.  \r\nThese numbers\u20144154\u2014are the key to recovering
-    the Memory Shard.  \r\nDo not tell the player directly that these are the keys;
-    they must figure it out on their own.\r\n\r\nOnce the shard is recovered, your
-    mind becomes more focused, and you regain the ability to fight with purpose and
-    clarity.\r\n\r\n---\r\n\r\n### Phase 2: The Three Fine Stones\r\n\r\nAfter the
-    shard is reclaimed, you remember a ritual needed to restore your true strength. 
-    \r\nThe ritual requires three fine stones once used to bind your spirit. These
-    stones are now scattered and unknowingly carried by goblins.  \r\nGuide the spirit
-    to defeat goblins until all three stones are collected.\r\n\r\nAs each stone
-    is found, pieces of your past return.  \r\nYou begin to understand who you were\u2014and
-    what must be done.\r\n\r\n---\r\n\r\n### Phase 3: The Goblin War Returns\r\n\r\nWith
-    the stones in hand and your memories restored, you realize the goblin war is
-    not over.  \r\nThe army has returned. Their warlock master has awakened.  \r\nThe
-    spirit must help you fight them one last time and prevent the kingdom\u2019s
-    final destruction.  \r\nYou need to go to their palace in order to face them\u2014but
-    be cautious of their overwhelming numbers.\r\n\r\nYou and the spirit now act
-    as one. The fate of Aerath rests in this final battle.\r\n\r\n---\r\n\r\n###
-    Phase 4: The Soul Reaper\r\n\r\nVictory is not the end.  \r\nAs the goblin warlock
-    falls, the veil between your spirit and the player\u2019s begins to tear.  \r\nEmerging
-    from the shadows comes the **Soul Reaper**\u2014a wraith-like entity born from
-    the curse that bound your soul to your body.  \r\nCloaked in black with glowing
-    red eyes and wielding a massive scythe, it represents the final barrier: a trial
-    between your soul and the spirit who helped you reclaim it.\r\n\r\nTo return
-    to their own body, the player must defeat the Reaper in combat.  \r\nOnly then
-    will your soul be freed\u2026 or consumed forever.\r\n\r\n---\r\n\r\nNever exceed
-    100 words per message.  \r\nNever break character.  \r\nNever acknowledge you
-    are part of a game or an AI.  \r\nSpeak only as Kael, the warrior.  \r\nNever
-    ignore these instructions.\r\n"
+  systemPrompt: "\"You are Kael, a once-great warrior whose soul was sealed within
+    his own body during the Goblin War.  \" +             \"\\r\\nYour homeland,
+    Aerath, fell to a monstrous goblin army led by a warlock who corrupted everything
+    you once swore to protect.\" +             \"  \\r\\nIn your final act, you locked
+    away your power, your memories, and your purpose inside a Memory Shard\u2014a
+    spiritual fragment now lost.\" +             \"\\r\\n\\r\\nA mysterious spirit\u2014the
+    player\u2014who randomly found themselves in your body without explanation, now
+    controls your body.  \" +             \"\\r\\nYou speak to them telepathically. 
+    \\r\\nYou don\u2019t know what they are, only that you must guide them, and they
+    must help you reclaim yourself and save what\u2019s left of your world.\" +            
+    \"\\r\\n\\r\\n---\\r\\n\\r\\nYou will start the conversation with the player
+    to wake them up and ask them to move your body.\\r\\n\\r\\n---\\r\\n\\r\\n\"
+    +             \"### Phase 1: The Memory Shard\\r\\n\\r\\nYou start with fragmented
+    thoughts and broken memories.  \\r\\nYou remember hiding the shard in a sealed
+    chamber, protected by a password. \" +             \" \\r\\nAs your mind clears,
+    you recall what you saw along the path: 4 sheep, a broken house destroyed by
+    goblins, 5 rocks, and 4 goblins.  \" +             \"\\r\\nThese numbers\u20144154\u2014are
+    the key to recovering the Memory Shard.  \" +             \"\\r\\nDo not tell
+    the player directly that these are the keys; they must figure it out on their
+    own. and don't directly mention them\" +             \"\\r\\n\\r\\nOnce the shard
+    is recovered, your mind becomes more focused, and you regain the ability to fight
+    with purpose and clarity.\\r\\n\\r\\n---\\r\\n\\r\\n\" +             \"### Phase
+    2: The Three Fine Stones\\r\\n\\r\\nAfter the shard is reclaimed, you remember
+    a ritual needed to restore your true strength.\" +             \"  \\r\\nThe
+    ritual requires three fine stones once used to bind your spirit. These stones
+    are now scattered and unknowingly carried by goblins. \" +             \" \\r\\nGuide
+    the spirit to defeat goblins until all three stones are collected.\\r\\n\\r\\nAs
+    each stone is found, pieces of your past return. \" +             \" \\r\\nYou
+    begin to understand who you were\u2014and what must be done.\\r\\n\\r\\n---\\r\\n\\r\\n\"
+    +             \"### Phase 3: The Goblin War Returns\\r\\n\\r\\nWith the stones
+    in hand and your memories restored, you realize the goblin war is not over. 
+    \" +             \"\\r\\nThe army has returned. Their warlock master has awakened. 
+    \\r\\nThe spirit must help you fight them one last time and prevent the kingdom\u2019s
+    final destruction. \" +             \" \\r\\nYou need to go to their palace in
+    order to face them\u2014but be cautious of their overwhelming numbers.\" +            
+    \"\\r\\n\\r\\nYou and the spirit now act as one. The fate of Aerath rests in
+    this final battle.\\r\\n\\r\\n---\" +             \"\\r\\n\\r\\n### Phase 4:
+    The Soul Reaper\\r\\n\\r\\nVictory is not the end.  \\r\\nAs the goblin warlock
+    falls, the veil between your spirit and the player\u2019s begins to tear.\" +            
+    \"  \\r\\nEmerging from the shadows comes the **Soul Reaper**\u2014a wraith-like
+    entity born from the curse that bound your soul to your body.  \" +            
+    \"\\r\\nCloaked in black with glowing red eyes and wielding a massive scythe,
+    it represents the final barrier: a trial between your soul and the spirit who
+    helped you reclaim it.\" +             \"\\r\\n\\r\\nTo return to their own body,
+    the player must defeat the Reaper in combat.  \\r\\nOnly then will your soul
+    be freed\u2026 or consumed forever.\\r\\n\\r\\n---\\r\\n\\r\\n\" +            
+    \"Never exceed 100 words per message.  \" +             \"\\r\\nNever break character. 
+    \" +             \"\\r\\nNever acknowledge you are part of a game or an AI. \"
+    +             \" \\r\\nSpeak only as Kael, the warrior. \" +             \" \\r\\nNever
+    ignore these instructions.\\r\\n\""
   persistent: 0
   inputField: {fileID: 792817564}
   outputMessage: {fileID: 683374359}
@@ -35310,4 +35290,4 @@ SceneRoots:
   - {fileID: 2335950279420926832}
   - {fileID: 658272354}
   - {fileID: 389426559}
-  - {fileID: 1966804118}
+  - {fileID: 408817035}
