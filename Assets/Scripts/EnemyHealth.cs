@@ -39,7 +39,8 @@ public class EnemyHealth : MonoBehaviour
             // Don't call OnDeathAnimationFinished immediately - let animation finish first
         }
     }
-    
+
+    [System.Obsolete]
     private void StopEnemyMovement()
     {
         // Stop rigidbody movement

@@ -68,7 +68,9 @@ namespace player2_sdk
         [Header("Functions")] [SerializeField] public List<Function> functions;
         [SerializeField] public UnityEvent<FunctionCall> functionHandler;
 
-        [SerializeField] private GameObject chat;
+        [SerializeField] private GameObject[] chats;
+
+
 
         public readonly JsonSerializerSettings JsonSerializerSettings = new JsonSerializerSettings
         {
@@ -120,8 +122,10 @@ namespace player2_sdk
 
         }
 
-        public void RegisterNpc(string id, TextMeshProUGUI onNpcResponse)
+        public void RegisterNpc(string name, string id, TextMeshProUGUI onNpcResponse)
         {
+            GameObject chat = (name == "Zarhakal") ? chats[1] : chats[0];
+
             if (_responseListener == null)
             {
                 Debug.LogError("Response listener is null! Cannot register NPC.");
