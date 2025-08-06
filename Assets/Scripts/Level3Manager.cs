@@ -5,6 +5,7 @@ using player2_sdk;
 public class Level3Manager : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject KaelChat;
     [SerializeField] private float minSpawnDistance = 2.5f;
     [SerializeField] private float maxSpawnDistance = 5f;
     [SerializeField] private float spawnInterval = 0.3f;      
@@ -26,7 +27,7 @@ public class Level3Manager : MonoBehaviour
     {
         if (killed_enemies == totalToSpawn)
         {
-            _ = Kael.SendChatMessageAsync("This is a system message: you and the player just defeated the goblin army and moving to the next stage");
+            _ = Kael.SendChatMessageAsync("This is a system message: you and the player just defeated the goblin army and moving to the next stage", KaelChat);
             GameManager.Instance.ChangeState(GameState.Level4);
         }
     }

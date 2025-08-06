@@ -124,8 +124,8 @@ namespace player2_sdk
 
         public void RegisterNpc(string name, string id, TextMeshProUGUI onNpcResponse)
         {
-            GameObject chat = (name == "Zarhakal") ? chats[1] : chats[0];
-
+            //GameObject chat = (name == "Zarhakal") ? chats[1] : chats[0];
+            Debug.Log(name);
             if (_responseListener == null)
             {
                 Debug.LogError("Response listener is null! Cannot register NPC.");
@@ -148,7 +148,7 @@ namespace player2_sdk
                     if (!string.IsNullOrEmpty(response.message))
                     {
                         Debug.Log($"Updating UI for NPC {id}: {response.message}");
-                        chat.SetActive(true);
+                        //chat.SetActive(true);
                         //StartCoroutine(TypeText(onNpcResponse,response.message, 0.02f));
                         onNpcResponse.text = response.message;
                     }

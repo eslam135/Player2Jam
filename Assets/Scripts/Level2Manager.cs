@@ -4,6 +4,7 @@ using UnityEngine;
 public class Level2Manager : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject kaelChat;
     private Transform enemyParent;
     [SerializeField] private float minSpawnDistance = 2.5f;
     [SerializeField] private float maxSpawnDistance = 5f;
@@ -37,7 +38,7 @@ public class Level2Manager : MonoBehaviour
         else
         {
             Destroy(enemyParent.gameObject);
-            _ = Kael.SendChatMessageAsync("This is a system message: you and the player just collected all the three fragments");
+            _ = Kael.SendChatMessageAsync("This is a system message: you and the player just collected all the three fragments", kaelChat);
             GameManager.Instance.ChangeState(GameState.Level3);
         }
     }
