@@ -127,6 +127,7 @@
 
         private void OnChatMessageSubmitted(string message)
         {
+
             outputMessage.text = "loading...";
             _ = SendChatMessageAsync(message);
         }
@@ -166,16 +167,21 @@
                     Debug.Log($"NPC spawned successfully with ID: {_npcID}");
                     string name = spawnData.short_name;
                     npcManager.RegisterNpc(name, _npcID, outputMessage);
-                    if(name == "Kael")
+                    if (name == "Kael")
                     {
-                        _ = SendChatMessageAsync("This is a system message: The game just started, you need to talk to the player", chats[0]);
+                        if (GameManager.Instance.getCurrState() == GameState.Level1)
+                        {
+                            _ = SendChatMessageAsync("This is a system message: The game just started, you need to talk to the player", chats[0]);
+                        }
                     }
                     else
                     {
-                        Debug.Log("HERE");
-                        _ = SendChatMessageAsync("This is a system message: The player and Kael just arrived in front of you after defeating the goblin army", chats[1]);
+                        if (GameManager.Instance.getCurrState() == GameState.Level4)
+                        {
+                            _ = SendChatMessageAsync("This is a system message: The player and Kael just arrived in front of you after defeating the goblin army", chats[1]);
 
-                    }
+                        }                   
+                         }
                 }
                 else
                 {
@@ -197,7 +203,8 @@
         {
             GameManager.Instance.isTalking = true;
             chat.SetActive(true);
-
+            outputMessage.text = "loading...";
+            inputField.DeactivateInputField();
             if (string.IsNullOrWhiteSpace(message))
             {
                 return;
@@ -221,6 +228,7 @@
                 };
 
                 await SendChatRequestAsync(chatRequest);
+                inputField.ActivateInputField();
             }
             catch (OperationCanceledException)
             {

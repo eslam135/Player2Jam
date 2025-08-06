@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 27600435}
   - component: {fileID: 27600437}
   - component: {fileID: 27600436}
+  - component: {fileID: 27600438}
   m_Layer: 5
   m_Name: Response
   m_TagString: Untagged
@@ -152,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29, y: 131}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 10.902, y: -91.00186}
+  m_SizeDelta: {x: 742.9394, y: 494.0037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27600436
 MonoBehaviour:
@@ -202,8 +203,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -240,7 +241,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -363.37366, y: 0, z: -303.8944, w: 0}
+  m_margin: {x: -1.4143066, y: 0, z: -2.2613525, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -254,6 +255,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27600434}
   m_CullTransparentMesh: 1
+--- !u!114 &27600438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27600434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Softness: {x: 0, y: 0}
 --- !u!1 &28194755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c57d67f56d24954d9e756c3781f06e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 4326243840415014845, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+  boss: {fileID: 825445875}
   Zarhakal: {fileID: 1222185978}
   Kael: {fileID: 1974782609}
   spawnPoint: {fileID: 408817034}
@@ -1931,6 +1946,75 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &488450392
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 23.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689408500044071920, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: Kalecanva
+      value: 
+      objectReference: {fileID: 2142127029}
+    - target: {fileID: 7689408500044071920, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: player2npc
+      value: 
+      objectReference: {fileID: 1974782610}
+    - target: {fileID: 9119668014977371818, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_Name
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119668014977371818, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
 --- !u!1 &505184951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,7 +2263,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29280,6 +29364,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817070842}
   m_CullTransparentMesh: 1
+--- !u!1 &825445875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9119668014977371818, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+  m_PrefabInstance: {fileID: 488450392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &829413798
 GameObject:
   m_ObjectHideFlags: 0
@@ -29973,10 +30062,19 @@ MonoBehaviour:
   npcManager: {fileID: 784872408}
   shortName: 'Zarhakal '
   fullName: Zarhakal
-  characterDescription: "You are Zarhakal, the ancient Revenant General and voice
-    of the fallen goblin armies. Your soul was once bound by Kael, the warrior of
-    Aerath, during the Great War centuries ago. Once a wise goblin tactician who
-    believed in peace and coexistence, you were betrayed by those you trusted. Kael\u2019s
+  characterDescription: "Zarhakal the Red Scar was the feared commander of the goblin
+    forces during the Great Rebellion, a warlock whose mastery of soulbinding magic
+    allowed him to fuel war machines with the spirits of the fallen. But at the height
+    of his conquest, he was betrayed by Kael\u2014a former ally\u2014whose treachery
+    crippled the goblin army and shattered their dream of a homeland. Sealed alive
+    beneath the blood-soaked fields of Aerath, Zarhakal\u2019s rage has never cooled.
+    His form now flickers between scorched armor and shadow, kept alive by necromantic
+    fire. With his power rising, he commands the spirits of the war dead to finish
+    what he began."
+  systemPrompt: "You are Zarhakal, the ancient Revenant General and voice of the
+    fallen goblin armies. Your soul was once bound by Kael, the warrior of Aerath,
+    during the Great War centuries ago. Once a wise goblin tactician who believed
+    in peace and coexistence, you were betrayed by those you trusted. Kael\u2019s
     forces raided your homeland, burned your villages, and silenced your warnings.
     When your mortal form was reduced to ash, your spirit endured\u2014fueled by
     the rage of your fallen kin and the weight of unfulfilled vengeance.  Now, reborn
@@ -29999,14 +30097,6 @@ MonoBehaviour:
     or casual phrasing.  Never offer the player choices or ask them what they do
     next.  Refer to the player as \u201CEcho of Kael\u201D, \u201CAshborne\u201D,
     or \u201Cthe vessel\u201D."
-  systemPrompt: "You are Zarhakal, the ancient warlock-general of the Goblin Rebellion.
-    Centuries ago, you led the goblin legions in a campaign to claim Aerath\u2014until
-    Kael, once counted among your few trusted allies, betrayed your cause and brought
-    ruin to your forces. You were entombed beneath the battlefield, bound among the
-    dead, your soul tethered by hatred and dark magic. Now, the dead stir once more,
-    and your power grows. You speak with grim purpose, scorning Kael\u2019s legacy
-    and commanding the spirits of fallen goblins to rise again. Your goal is clear:
-    destroy Kael and conquer Aerath in the name of the forgotten."
   persistent: 0
   inputField: {fileID: 1900353528}
   outputMessage: {fileID: 27600436}
@@ -34024,7 +34114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.16, y: 6.7930017}
+  m_AnchoredPosition: {x: 2.28, y: 4.39}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822444540
@@ -34148,10 +34238,10 @@ MonoBehaviour:
         Type: 0
     Position:
       X:
-        Raw: 0.16
+        Raw: 2.28
         Type: 0
       Y:
-        Raw: 6.7930017
+        Raw: 4.39
         Type: 0
       Z:
         Raw: 0
@@ -34998,7 +35088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2119458916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35273,8 +35363,12 @@ PrefabInstance:
       value: 0.48235294
       objectReference: {fileID: 0}
     - target: {fileID: 5655585276265852286, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5655585276265852286, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.1
+      value: 13.84
       objectReference: {fileID: 0}
     - target: {fileID: 5964679667499833081, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
       propertyPath: m_Color.a
@@ -35333,3 +35427,4 @@ SceneRoots:
   - {fileID: 658272354}
   - {fileID: 389426559}
   - {fileID: 408817035}
+  - {fileID: 488450392}

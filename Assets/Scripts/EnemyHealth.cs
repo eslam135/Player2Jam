@@ -1,3 +1,4 @@
+using player2_sdk;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator), typeof(AudioSource))]
@@ -14,7 +15,13 @@ public class EnemyHealth : MonoBehaviour
     private bool isDying = false;
     private static readonly int HashDeath = Animator.StringToHash("Death");
     [SerializeField] private GameObject fragment;
+    [SerializeField] public GameObject Kalecanva;
+    [SerializeField] public Player2Npc player2npc;
+    private void OnBossDeath()
+    {
+        _ = player2npc.SendChatMessageAsync("This is a system message: The player just entered the correct password and found the memory fragment finishing phase 1", Kalecanva);
 
+    }
     private void Awake()
     {
         anim = GetComponent<Animator>();

@@ -10,9 +10,10 @@ public class Level4Manager : MonoBehaviour
 
     void Start()
     {
-        Kael.SetActive(false);
+
+       // Kael.SetActive(false);
         Zarhakal.gameObject.SetActive(true);
-        Instantiate(boss, spawnPoint.transform.position, Quaternion.identity);
+        boss.SetActive(true);
     }
 
     void Update()
