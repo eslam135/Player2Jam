@@ -976,7 +976,7 @@ MonoBehaviour:
   - {fileID: 658272352}
   - {fileID: 389426558}
   - {fileID: 408817034}
-  currentState: 2
+  currentState: 3
 --- !u!4 &168882813
 Transform:
   m_ObjectHideFlags: 0
@@ -1084,6 +1084,7 @@ MonoBehaviour:
   - {fileID: 1354933045}
   result: {fileID: 817070844}
   npc: {fileID: 1974782610}
+  kaelChat: {fileID: 2142127029}
 --- !u!1 &177405324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,6 +1766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4060015468528334192, guid: c8d1d66b59de11049af370f6b328f5a3, type: 3}
+  KaelChat: {fileID: 2142127029}
   minSpawnDistance: 2.5
   maxSpawnDistance: 5
   spawnInterval: 0.3
@@ -2087,11 +2089,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5401609952333710860, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.52
+      value: -6.7
       objectReference: {fileID: 0}
     - target: {fileID: 5401609952333710860, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.59
+      value: 17.2
       objectReference: {fileID: 0}
     - target: {fileID: 5401609952333710860, guid: 7ae91080fbf7b214a985fcaa39bb8434, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2282,7 +2284,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.149019, y: -4.3144226, z: -10}
+  m_LocalPosition: {x: -6.152396, y: 17.199997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2551,6 +2553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4060015468528334192, guid: c8d1d66b59de11049af370f6b328f5a3, type: 3}
+  kaelChat: {fileID: 2142127029}
   minSpawnDistance: 2.5
   maxSpawnDistance: 5
   spawnInterval: 3
@@ -29988,8 +29991,11 @@ MonoBehaviour:
     and commanding the spirits of fallen goblins to rise again. Your goal is clear:
     destroy Kael and conquer Aerath in the name of the forgotten."
   persistent: 0
-  inputField: {fileID: 792817564}
-  outputMessage: {fileID: 683374359}
+  inputField: {fileID: 1900353528}
+  outputMessage: {fileID: 27600436}
+  chats:
+  - {fileID: 2142127029}
+  - {fileID: 2119458915}
 --- !u!4 &1222185979
 Transform:
   m_ObjectHideFlags: 0
@@ -30047,7 +30053,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308499120}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -33939,7 +33945,7 @@ Transform:
   m_GameObject: {fileID: 1759403107}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.52, y: -9.59, z: -10}
+  m_LocalPosition: {x: -6.7, y: 17.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34869,6 +34875,9 @@ MonoBehaviour:
   persistent: 0
   inputField: {fileID: 792817564}
   outputMessage: {fileID: 683374359}
+  chats:
+  - {fileID: 2142127029}
+  - {fileID: 2119458915}
 --- !u!4 &1974782611
 Transform:
   m_ObjectHideFlags: 0
@@ -35214,12 +35223,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1485440449475036687, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1928067329843076102, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.66
       objectReference: {fileID: 0}
+    - target: {fileID: 3135875824791429293, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3289655761273888356, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
       propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758879678848324212, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376452946593325003, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5043567833055177119, guid: 4e34aa8985ffba640a3c3a39ed051756, type: 3}

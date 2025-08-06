@@ -104,6 +104,8 @@
 
         private string _npcID = null;
 
+        [SerializeField] public GameObject[] chats;
+
         private string _gameID() => npcManager.gameId;
         private string _baseUrl() => NpcManager.GetBaseUrl();
 
@@ -166,11 +168,12 @@
                     npcManager.RegisterNpc(name, _npcID, outputMessage);
                     if(name == "Kael")
                     {
-                        _ = SendChatMessageAsync("This is a system message: The game just started, you need to talk to the player");
+                        _ = SendChatMessageAsync("This is a system message: The game just started, you need to talk to the player", chats[0]);
                     }
                     else
                     {
-                        _ = SendChatMessageAsync("This is a system message: The player and Kael just arrived in front of you after defeating the goblin army");
+                        Debug.Log("HERE");
+                        _ = SendChatMessageAsync("This is a system message: The player and Kael just arrived in front of you after defeating the goblin army", chats[1]);
 
                     }
                 }
@@ -190,6 +193,44 @@
             }
         }
 
+        public async Awaitable SendChatMessageAsync(string message, GameObject chat)
+        {
+            GameManager.Instance.isTalking = true;
+            chat.SetActive(true);
+
+            if (string.IsNullOrWhiteSpace(message))
+            {
+                return;
+            }
+
+            try
+            {
+                Debug.Log("Sending message to NPC: " + message);
+
+                if (string.IsNullOrEmpty(_npcID))
+                {
+                    Debug.LogWarning("NPC ID is not set! Cannot send message.");
+                    return;
+                }
+
+                var chatRequest = new ChatRequest
+                {
+                    sender_name = fullName,
+                    sender_message = message,
+                    tts = null
+                };
+
+                await SendChatRequestAsync(chatRequest);
+            }
+            catch (OperationCanceledException)
+            {
+                Debug.Log("Chat message send operation was cancelled");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Unexpected error sending chat message: {ex.Message}");
+            }
+        }
         public async Awaitable SendChatMessageAsync(string message)
         {
             GameManager.Instance.isTalking = true;

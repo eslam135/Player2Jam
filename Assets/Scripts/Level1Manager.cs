@@ -9,6 +9,7 @@ public class Level1Manager : MonoBehaviour
     [SerializeField] private TMP_InputField[] passwordFields;
     [SerializeField] private TMP_Text result;
     [SerializeField] private Player2Npc npc;
+    [SerializeField] private GameObject kaelChat;
     private bool nearHouse;
     private bool finishedTask;
     public static bool inText;
@@ -48,7 +49,7 @@ public class Level1Manager : MonoBehaviour
             result.color = Color.green;
             result.text = "Congratulations! you got it right";
             passwordParent.SetActive(false);
-            _ = npc.SendChatMessageAsync("This is a system message: The player just entered the correct password and found the memory fragment finishing phase 1");
+            _ = npc.SendChatMessageAsync("This is a system message: The player just entered the correct password and found the memory fragment finishing phase 1", kaelChat);
             finishedTask = true;
             GameManager.Instance.ChangeState(GameState.Level2);
         }
