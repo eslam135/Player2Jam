@@ -68,31 +68,37 @@ public class EnemyHealth : MonoBehaviour
     }
 
     public void TakeDamage(int amount)
+{
+    if (isDying) return;
+
+    // reveal bar on first hit
+    if (hitPoint == maxHitPoint)
+        ShowHealthUI();
+
+    hitPoint -= amount;
+
+    // Clamp HP to a minimum of 0
+    if (hitPoint < 0)
+        hitPoint = 0;
+
+    Debug.Log($"{gameObject.name} took {amount} damage. Remaining HP: {hitPoint}");
+
+    // play the damage sound
+    if (damageClip != null && audioSource != null)
+        audioSource.PlayOneShot(damageClip);
+
+    // update UI
+    if (healthBarContainer != null)
+        UpdateHealthBar();
+
+    if (hitPoint <= 0)
     {
-        if (isDying) return;
-
-        // reveal bar on first hit
-        if (hitPoint == maxHitPoint)
-            ShowHealthUI();
-
-        hitPoint -= amount;
-        Debug.Log($"{gameObject.name} took {amount} damage. Remaining HP: {hitPoint}");
-
-        // play the damage sound
-        if (damageClip != null && audioSource != null)
-            audioSource.PlayOneShot(damageClip);
-
-        // update UI
-        if (healthBarContainer != null)
-            UpdateHealthBar();
-
-        if (hitPoint <= 0)
-        {
-            isDying = true;
-            StopEnemyMovement();
-            anim.SetTrigger(HashDeath);
-        }
+        isDying = true;
+        StopEnemyMovement();
+        anim.SetTrigger(HashDeath);
     }
+}
+
 
     private void StopEnemyMovement()
     {

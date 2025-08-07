@@ -545,7 +545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4694985118125277316
 Transform:
   m_ObjectHideFlags: 0
@@ -829,6 +829,8 @@ MonoBehaviour:
   fragment: {fileID: 0}
   Kalecanva: {fileID: 0}
   player2npc: {fileID: 0}
+  winScreen: {fileID: 0}
+  winSound: {fileID: 0}
 --- !u!70 &8060074358653580
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -374,6 +374,8 @@ MonoBehaviour:
   fragment: {fileID: 5253268937426068057, guid: 44733774b1c379941957981e6be95307, type: 3}
   Kalecanva: {fileID: 0}
   player2npc: {fileID: 0}
+  winScreen: {fileID: 0}
+  winSound: {fileID: 0}
 --- !u!114 &4177757144139490395
 MonoBehaviour:
   m_ObjectHideFlags: 0
