@@ -2,14 +2,17 @@ using player2_sdk;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public bool isTalking;
+    public bool isPaused;
 
     [SerializeField] private Player2Npc npc;
     [SerializeField] private GameObject[] npcChats;
+    [SerializeField] private GameObject pauseParent;
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private GameObject[] levels;
     [SerializeField] private GameState currentState = GameState.Level1;
@@ -29,17 +32,27 @@ public class GameManager : MonoBehaviour
         {
             levels[i].SetActive(i == (int)currentState);
         }
+        pauseParent.SetActive(false);
 
     }
 
     private void Update()
     {
-
+        if (Input.GetKeyUp(KeyCode.T))
+        {
+            isTalking = true;
+            npcChats[0].SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            isPaused = !isPaused;
+            pauseParent.SetActive(isPaused);
+        }
         for (int i = 0; i < levels.Length; i++)
         {
             levels[i].SetActive(i == (int)currentState);
         }
-        if (isTalking)
+        if (isTalking || isPaused)
         {
             playerInput.DeactivateInput();
         }
@@ -67,6 +80,10 @@ public class GameManager : MonoBehaviour
     public GameState getCurrState()
     {
         return currentState;
+    }
+    public void backToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
 
