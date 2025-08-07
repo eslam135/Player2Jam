@@ -77,14 +77,26 @@ public class GameManager : MonoBehaviour
     {
         currentState = state;
     }
+    public void ResumeGame()
+{
+    isPaused = false;
+    pauseParent.SetActive(false);
+
+    // Reactivate player input
+    if (playerInput != null)
+        playerInput.ActivateInput();
+}
     public GameState getCurrState()
     {
         return currentState;
     }
     public void backToMainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
+{
+    Destroy(gameObject);
+    Instance = null;
+
+    SceneManager.LoadScene(0);
+}
 }
 
 public enum GameState
