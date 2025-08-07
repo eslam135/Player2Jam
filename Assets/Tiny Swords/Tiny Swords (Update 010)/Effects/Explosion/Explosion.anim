@@ -104,14 +104,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.87
-    functionName: spawnFragment
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.89
+  - time: 0.8
     functionName: OnDeathAnimationFinished
     data: 
     objectReferenceParameter: {fileID: 0}

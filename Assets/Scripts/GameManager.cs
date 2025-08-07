@@ -51,8 +51,13 @@ public class GameManager : MonoBehaviour
 
     public void OnCloseButtonPress(GameObject obj)
     {
+        // hide the UI panel
         obj.SetActive(false);
+
         isTalking = false;
+
+        if (playerInput != null && !playerInput.enabled)
+            playerInput.enabled = true;
     }
 
     public void ChangeState(GameState state)

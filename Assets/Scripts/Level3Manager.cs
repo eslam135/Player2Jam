@@ -11,6 +11,8 @@ public class Level3Manager : MonoBehaviour
     [SerializeField] private float spawnInterval = 0.3f;      
     [SerializeField] private float waveInterval = 4f;
     [SerializeField] private Player2Npc Kael;
+    [SerializeField] private GameObject Firesoul;
+    [SerializeField] private GameObject SkillSCD;
     private int totalToSpawn;
     private int totalSpawned = 0;
     private int waveNumber = 1;
@@ -20,7 +22,9 @@ public class Level3Manager : MonoBehaviour
     public static int killed_enemies = 0;
     private void Start()
     {
-        totalToSpawn = Random.Range(10, 20);  
+        Firesoul.SetActive(true);
+        SkillSCD.SetActive(true);
+        totalToSpawn = Random.Range(90, 120);  
         StartCoroutine(SpawnWaves());
     }
     private void Update()

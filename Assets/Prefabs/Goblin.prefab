@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 3262443658077386863}
   - component: {fileID: 2053802846779772190}
   - component: {fileID: 6724973504903651818}
+  - component: {fileID: 4177757144139490395}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Enemy
@@ -365,8 +366,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  healthBarContainer: {fileID: 0}
+  currentHealthBar: {fileID: 0}
+  healthText: {fileID: 0}
   deathClip: {fileID: 8300000, guid: e7963e0734540ad41839c937ebbb90e1, type: 3}
+  damageClip: {fileID: 0}
   fragment: {fileID: 5253268937426068057, guid: 44733774b1c379941957981e6be95307, type: 3}
+  Kalecanva: {fileID: 0}
+  player2npc: {fileID: 0}
+--- !u!114 &4177757144139490395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4060015468528334192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476bfced061e0074385760c210163ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationClip: {fileID: 8300000, guid: 0b2179712c7fbb64786d9a0a72c4d210, type: 3}
 --- !u!1 &5928434875350770369
 GameObject:
   m_ObjectHideFlags: 0

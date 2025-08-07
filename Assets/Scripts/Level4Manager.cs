@@ -5,7 +5,7 @@ public class Level4Manager : MonoBehaviour
 {
     [SerializeField] private GameObject boss;
     [SerializeField] private Player2Npc Zarhakal;
-    [SerializeField] private GameObject Kael;
+    [SerializeField] private GameObject zarhkalChat;
     [SerializeField] private GameObject spawnPoint;
 
     void Start()

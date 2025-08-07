@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 [RequireComponent(typeof(Animator), typeof(AudioSource))]
@@ -100,8 +101,6 @@ public class HealthSys : MonoBehaviour
     {
         isDying = true;
         anim.SetTrigger(HashDeath);
-        PlayDeathSound();
-        // FinalizeDeath will be called by animation event at end of death clip
     }
 
     /// <summary>
@@ -110,6 +109,7 @@ public class HealthSys : MonoBehaviour
     public void FinalizeDeath()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene("MainMenu");
     }
 
     /// <summary>

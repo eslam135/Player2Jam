@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Boss : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
@@ -13,16 +14,23 @@ public class Boss : MonoBehaviour
     [Header("Summoning")]
     [SerializeField] private GameObject goblinPrefab;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip skillAttackSound;
+    [SerializeField] private AudioClip summonSound;
+
     private float attackCoolDownTimer;
     private Rigidbody2D rb;
     private Transform player;
     private Animator anim;
+    private AudioSource audioSource;
     private int facingDir = 1;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
@@ -121,6 +129,33 @@ public class Boss : MonoBehaviour
         anim.SetBool("isSkillAttacking", newState == BossState.SkillAttacking);
         anim.SetBool("isDying", newState == BossState.Dying);
         anim.SetBool("isSummoning", newState == BossState.Summoning);
+    }
+
+    /// <summary>
+    /// Play attack sound - call this from animation events
+    /// </summary>
+    public void PlayAttackSound()
+    {
+        if (attackSound != null && audioSource != null)
+            audioSource.PlayOneShot(attackSound);
+    }
+
+    /// <summary>
+    /// Play skill attack sound - call this from animation events
+    /// </summary>
+    public void PlaySkillAttackSound()
+    {
+        if (skillAttackSound != null && audioSource != null)
+            audioSource.PlayOneShot(skillAttackSound);
+    }
+
+    /// <summary>
+    /// Play summon sound - call this from animation events or when summoning
+    /// </summary>
+    public void PlaySummonSound()
+    {
+        if (summonSound != null && audioSource != null)
+            audioSource.PlayOneShot(summonSound);
     }
 }
 

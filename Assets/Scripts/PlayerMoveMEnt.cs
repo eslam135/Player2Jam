@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource audioSource;
 
     private Vector2 moveInput;
-    private Vector2 lastMoveDir;
+    private Vector2 lastMoveDir = Vector2.down;   // default facing down
     private bool    isAttacking;
     private bool    wantCombo;
     private Vector2 attackDir;
@@ -42,23 +42,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // freeze if attacking, else move
+        // move or freeze during attack
         rb.linearVelocity = isAttacking ? Vector2.zero : moveInput * speed;
 
-        // flip sprite by the active x‐direction
-        float dirX = isAttacking
-            ? attackDir.x
-            : (moveInput.x != 0 ? moveInput.x : lastMoveDir.x);
-
+        // decide flip direction
+        Vector2 dirVec = isAttacking ? attackDir : lastMoveDir;
+        float dirX = dirVec.x;
         if ((dirX > 0 && facing < 0) || (dirX < 0 && facing > 0))
             Flip();
 
-        // drive Run/Idle bools
+        // drive Run/Idle
         bool running = !isAttacking && moveInput.sqrMagnitude > 0.01f;
         anim.SetBool(HashRun, running);
         anim.SetBool(HashIdle, !running && !isAttacking);
 
-        // feed blend‐tree floats when attacking
+        // feed blend-tree while attacking
         if (isAttacking)
         {
             anim.SetFloat(HashHoriz, attackDir.x);
@@ -74,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = s;
     }
 
-    // PlayerInput Send Messages
+    // Input callbacks
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
@@ -87,13 +85,9 @@ public class PlayerMovement : MonoBehaviour
         if (!value.isPressed) return;
 
         if (!isAttacking)
-        {
             StartCoroutine(DoAttackCombo());
-        }
         else if (!wantCombo)
-        {
             wantCombo = true;
-        }
     }
 
     private IEnumerator DoAttackCombo()
@@ -101,59 +95,45 @@ public class PlayerMovement : MonoBehaviour
         isAttacking = true;
         wantCombo   = false;
 
-        // determine attack direction
-        Vector2 d = moveInput.sqrMagnitude > 0.01f
-            ? moveInput
-            : lastMoveDir;
-
-        // snap to cardinal
+        // pick direction (snap to cardinal)
+        Vector2 d = moveInput.sqrMagnitude > 0.01f ? moveInput : lastMoveDir;
         if (Mathf.Abs(d.x) > Mathf.Abs(d.y))
             d = new Vector2(Mathf.Sign(d.x), 0f);
         else
             d = new Vector2(0f, Mathf.Sign(d.y));
         attackDir = d;
 
-        // —— FIRST ATTACK ——
+        // —— FIRST ATTACK —— 
         anim.SetFloat(HashHoriz, attackDir.x);
         anim.SetFloat(HashVert,  attackDir.y);
         anim.SetBool(HashAttack, true);
         anim.Play(StateAttack, 0, 0f);
+        if (swipe1 != null) audioSource.PlayOneShot(swipe1);
 
-        // play swipe1
-        if (swipe1 != null)
-            audioSource.PlayOneShot(swipe1);
-
-        yield return null;  // wait a frame
+        yield return null;
         float len1 = anim.GetCurrentAnimatorStateInfo(0).length / anim.speed;
         yield return new WaitForSeconds(len1);
-
         anim.SetBool(HashAttack, false);
 
-        // —— COMBO ATTACK? ——
+        // —— COMBO? —— 
         if (wantCombo)
         {
             wantCombo = false;
-
             anim.SetBool(HashAttack2, true);
             anim.Play(StateAttack2, 0, 0f);
-
-            // play swipe2
-            if (swipe2 != null)
-                audioSource.PlayOneShot(swipe2);
+            if (swipe2 != null) audioSource.PlayOneShot(swipe2);
 
             yield return null;
             float len2 = anim.GetCurrentAnimatorStateInfo(0).length / anim.speed;
             yield return new WaitForSeconds(len2);
-
             anim.SetBool(HashAttack2, false);
         }
 
-        // done
         isAttacking = false;
     }
 
-    // Exposed for AttackTrigger:
-    public int GetFacing() => facing;
-    public bool IsAttacking() => isAttacking;
-    public Vector2 GetAttackDirection() => attackDir;
+    /// <summary>
+    /// Full 2D facing vector: uses attackDir during an attack, otherwise lastMoveDir.
+    /// </summary>
+    public Vector2 FacingVector => isAttacking ? attackDir : lastMoveDir;
 }
