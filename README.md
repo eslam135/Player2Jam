@@ -4,6 +4,10 @@
 
 ---
 
+## Direct Installation
+https://youssef-ahmed-m.itch.io/the-kael-paradox
+---
+
 ##  Project Structure
 
 ```
@@ -28,8 +32,13 @@ Player2Jam/
    ```
 3. Open the project in Unity using the Hub or your preferred editor (Visual Studio or VS Code suggested).
 4. Let Unity resolve and import all packages.
+5. Install the Player2 application.
+6. Make sure Player2 is running in the background while playing.
+7. Enjoy! ;}
 
 ---
+
+
 
 ##  How to Play
 
@@ -39,6 +48,8 @@ Player2Jam/
   - **WASD** – Move
   - **Left Mouse Click** – Normal Attack
   - **Right Mouse Click** – Special Attack (after collecting Soul Fragments)
+  - **T** - To open Kael's chat
+  - **Esc** To pause the game
 
 ---
 
@@ -56,11 +67,6 @@ Player2Jam/
 - Bug reports and gameplay suggestions are welcome—feel free to open an Issue!
 - Interested in new features or narrative tweaks? Submit a Pull Request.
 
----
-
-##  License
-
-Include your desired license here (e.g., MIT, Creative Commons). If undecided, I can help draft one!
 
 ---
 
