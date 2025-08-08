@@ -229,7 +229,7 @@ MonoBehaviour:
   speed: 2
   attackRange: 1.6
   attackCoolDown: 2
-  playerDetectRange: 5
+  playerDetectRange: 1e+17
   detectionPoint: {fileID: 5944481818649537710}
   playerMask:
     serializedVersion: 2

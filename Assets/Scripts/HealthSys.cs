@@ -107,10 +107,14 @@ public class HealthSys : MonoBehaviour
     /// Called by animation event at end of death animation
     /// </summary>
     public void FinalizeDeath()
-    {
-        Destroy(gameObject);
-        SceneManager.LoadScene("MainMenu");
-    }
+{
+    // Destroy GameManager if it exists
+    if (GameManager.Instance != null)
+        Destroy(GameManager.Instance.gameObject);
+
+    Destroy(gameObject);
+    SceneManager.LoadScene("MainMenu");
+}
 
     /// <summary>
     /// Called by animation event during damage animation

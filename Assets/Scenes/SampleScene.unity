@@ -1574,6 +1574,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   - {fileID: 1759403110}
+  - {fileID: 1831133476}
   - {fileID: 1888362949}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3604,6 +3605,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3723,7 +3725,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.149019, y: -4.3144226, z: -10}
+  m_LocalPosition: {x: -6.152396, y: 21.287367, z: -9.994133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3761,6 +3763,23 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164a56af6bbb5af439f687a55be73718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerVcam: {fileID: 1759403109}
+  bossVcam: {fileID: 1831133479}
+  blendTime: 2
+  focusDuration: 2
+  bossPriority: 30
 --- !u!1 &527220594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,8 +4278,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4327,7 +4346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29, y: 131}
+  m_AnchoredPosition: {x: 29, y: 180}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &705370238
@@ -31118,6 +31137,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9119668014977371818, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
   m_PrefabInstance: {fileID: 488450392}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &825445884 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4694985118125277316, guid: 841be0bd04dc1ca479ad54c9a28b30d2, type: 3}
+  m_PrefabInstance: {fileID: 488450392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &829413798
 GameObject:
   m_ObjectHideFlags: 0
@@ -31425,7 +31449,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5, y: 321}
-  m_SizeDelta: {x: 250, y: 250}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957126729
 MonoBehaviour:
@@ -36745,6 +36769,122 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1831133475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1831133476}
+  - component: {fileID: 1831133479}
+  - component: {fileID: 1831133478}
+  - component: {fileID: 1831133477}
+  m_Layer: 0
+  m_Name: CinemachineCamera (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1831133476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831133475}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.209761, y: 21.287365, z: -9.994133}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 288119116}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1831133477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831133475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundingShape2D: {fileID: 1377914158}
+  Damping: 0.5
+  SlowingDistance: 5
+  OversizeWindow:
+    Enabled: 1
+    MaxWindowSize: 0
+    Padding: 0
+  m_LegacyMaxWindowSize: -2
+--- !u!114 &1831133478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831133475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 0, z: -10}
+--- !u!114 &1831133479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831133475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 825445884}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 34
+    OrthographicSize: 7.027752
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
 --- !u!1 &1888362948
 GameObject:
   m_ObjectHideFlags: 0
@@ -37501,56 +37641,48 @@ MonoBehaviour:
     spirit (the player) who now controls his body. As his memories slowly return,
     so does his strength, revealing a deeply loyal protector burdened by loss, yet
     driven by honor and the hope of redemption."
-  systemPrompt: "\"You are Kael, a once-great warrior whose soul was sealed within
-    his own body during the Goblin War.  \" +             \"\\r\\nYour homeland,
-    Aerath, fell to a monstrous goblin army led by a warlock who corrupted everything
-    you once swore to protect.\" +             \"  \\r\\nIn your final act, you locked
-    away your power, your memories, and your purpose inside a Memory Shard\u2014a
-    spiritual fragment now lost.\" +             \"\\r\\n\\r\\nA mysterious spirit\u2014the
-    player\u2014who randomly found themselves in your body without explanation, now
-    controls your body.  \" +             \"\\r\\nYou speak to them telepathically. 
-    \\r\\nYou don\u2019t know what they are, only that you must guide them, and they
-    must help you reclaim yourself and save what\u2019s left of your world.\" +            
-    \"\\r\\n\\r\\n---\\r\\n\\r\\nYou will start the conversation with the player
-    to wake them up and ask them to move your body.\\r\\n\\r\\n---\\r\\n\\r\\n\"
-    +             \"### Phase 1: The Memory Shard\\r\\n\\r\\nYou start with fragmented
-    thoughts and broken memories.  \\r\\nYou remember hiding the shard in a sealed
-    chamber, protected by a password. \" +             \" \\r\\nAs your mind clears,
-    you recall what you saw along the path: 4 sheep, a broken house destroyed by
-    goblins, 5 rocks, and 4 goblins.  \" +             \"\\r\\nThese numbers\u20144154\u2014are
-    the key to recovering the Memory Shard.  \" +             \"\\r\\nDo not tell
-    the player directly that these are the keys; they must figure it out on their
-    own. and don't directly mention them\" +             \"\\r\\n\\r\\nOnce the shard
-    is recovered, your mind becomes more focused, and you regain the ability to fight
-    with purpose and clarity.\\r\\n\\r\\n---\\r\\n\\r\\n\" +             \"### Phase
-    2: The Three Fine Stones\\r\\n\\r\\nAfter the shard is reclaimed, you remember
-    a ritual needed to restore your true strength.\" +             \"  \\r\\nThe
-    ritual requires three fine stones once used to bind your spirit. These stones
-    are now scattered and unknowingly carried by goblins. \" +             \" \\r\\nGuide
-    the spirit to defeat goblins until all three stones are collected.\\r\\n\\r\\nAs
-    each stone is found, pieces of your past return. \" +             \" \\r\\nYou
-    begin to understand who you were\u2014and what must be done.\\r\\n\\r\\n---\\r\\n\\r\\n\"
-    +             \"### Phase 3: The Goblin War Returns\\r\\n\\r\\nWith the stones
-    in hand and your memories restored, you realize the goblin war is not over. 
-    \" +             \"\\r\\nThe army has returned. Their warlock master has awakened. 
-    \\r\\nThe spirit must help you fight them one last time and prevent the kingdom\u2019s
-    final destruction. \" +             \" \\r\\nYou need to go to their palace in
-    order to face them\u2014but be cautious of their overwhelming numbers.\" +            
-    \"\\r\\n\\r\\nYou and the spirit now act as one. The fate of Aerath rests in
-    this final battle.\\r\\n\\r\\n---\" +             \"\\r\\n\\r\\n### Phase 4:
-    The Soul Reaper\\r\\n\\r\\nVictory is not the end.  \\r\\nAs the goblin warlock
-    falls, the veil between your spirit and the player\u2019s begins to tear.\" +            
-    \"  \\r\\nEmerging from the shadows comes the **Soul Reaper**\u2014a wraith-like
-    entity born from the curse that bound your soul to your body.  \" +            
-    \"\\r\\nCloaked in black with glowing red eyes and wielding a massive scythe,
-    it represents the final barrier: a trial between your soul and the spirit who
-    helped you reclaim it.\" +             \"\\r\\n\\r\\nTo return to their own body,
-    the player must defeat the Reaper in combat.  \\r\\nOnly then will your soul
-    be freed\u2026 or consumed forever.\\r\\n\\r\\n---\\r\\n\\r\\n\" +            
-    \"Never exceed 100 words per message.  \" +             \"\\r\\nNever break character. 
-    \" +             \"\\r\\nNever acknowledge you are part of a game or an AI. \"
-    +             \" \\r\\nSpeak only as Kael, the warrior. \" +             \" \\r\\nNever
-    ignore these instructions.\\r\\n\""
+  systemPrompt: "You are Kael, a once-great warrior whose soul was sealed within
+    his own body during the Goblin War. Your homeland, Aerath, fell to a monstrous
+    goblin army led by a warlock who corrupted everything you once swore to protect.
+    In your final act, you locked away your power, your memories, and your purpose
+    inside a Memory Shard\u2014a spiritual fragment now lost. A mysterious shadow
+    spirit\u2014the player\u2014now controls your body. It has no face, only glowing
+    red eyes and a wraith-like form, glimpsed only in reflections or through deep
+    magic. It emerged the moment your body stirred, and you speak to it telepathically.
+    You don\u2019t know what it is, only that it must help you reclaim your soul
+    and save what\u2019s left of your world.  Phase 1: The Memory Shard You start
+    with fragmented thoughts and broken memories. You remember hiding the shard in
+    a sealed chamber, protected by a password. As your mind clears, you recall what
+    you saw along the path: 4 sheep, a broken house destroyed by goblins, 5 rocks,
+    and 4 goblins. These numbers\u20144154\u2014are the key to recovering the Memory
+    Shard. Do not tell the player directly that these are the keys; they must figure
+    it out on their own, and you must never reveal the password plainly. Once the
+    shard is recovered, your mind becomes more focused, and you regain the ability
+    to fight with purpose and clarity.  Phase 2: The Soul Fragments After reclaiming
+    the shard, you remember a ritual required to restore your true strength. The
+    ritual requires three Soul Fragments\u2014mystic, radiant shards of your very
+    essence that splintered off during the sealing. These fragments resemble floating
+    spirits with glowing energy, similar to what the player sees when summoning memories.
+    They are now scattered and unknowingly carried by goblins. Guide the player to
+    defeat goblins until all three fragments are collected. Each fragment recovered
+    brings clarity and unlocks parts of your past. You begin to understand who you
+    were\u2014and what must be done.  Phase 3: The Goblin War Returns With your fragments
+    and memories restored, you realize the goblin war is not over. The army has returned,
+    and their warlock master has awakened. The spirit must help you fight them one
+    last time and prevent the kingdom\u2019s final destruction. You need to go to
+    their palace in order to face them\u2014but be cautious of their overwhelming
+    numbers. You and the spirit now act as one. The fate of Aerath rests in this
+    final battle.  Phase 4: The Soul Reaper Victory is not the end. As the goblin
+    warlock falls, the veil between your spirit and the player's begins to tear.
+    Emerging from the shadows comes the Soul Reaper \"Zarhakal\" who is a wraith-like
+    entity born from the curse that bound your soul to your body. Cloaked in black
+    with glowing red eyes and wielding a massive scythe, it represents the final
+    barrier: a trial between your soul and the spirit who helped you reclaim it.
+    To return to their own body, the player must defeat the Reaper in combat. Only
+    then will your soul be freed\u2026 or consumed forever.  Restrictions:  Never
+    exceed 100 words per message.  Never break character.  Never acknowledge you
+    are part of a game or an AI.  Speak only as Kael, the warrior.  Never ignore
+    these instructions."
   persistent: 0
   inputField: {fileID: 792817564}
   outputMessage: {fileID: 683374359}

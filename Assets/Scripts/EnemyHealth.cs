@@ -111,11 +111,27 @@ public class EnemyHealth : MonoBehaviour
         if (TryGetComponent<EnemyAttack>(out var atk)) atk.enabled = false;
     }
 
-    public void PlayDeathSound()
-    {
-        if (deathClip != null && audioSource != null)
-            audioSource.PlayOneShot(deathClip);
-    }
+   public void PlayDeathSound()
+{
+    // Play death sound if set
+    if (deathClip != null && audioSource != null)
+        audioSource.PlayOneShot(deathClip);
+
+    // Disable EnemyAttack script if it exists
+    EnemyAttack attackScript = GetComponent<EnemyAttack>();
+    if (attackScript != null)
+        attackScript.enabled = false;
+
+    // Disable Collider (works for 2D or 3D)
+    Collider col3D = GetComponent<Collider>();
+    if (col3D != null)
+        col3D.enabled = false;
+
+    Collider2D col2D = GetComponent<Collider2D>();
+    if (col2D != null)
+        col2D.enabled = false;
+}
+
 
     public void OnDeathAnimationFinished()
     {
