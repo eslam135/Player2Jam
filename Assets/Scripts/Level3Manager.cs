@@ -31,7 +31,6 @@ public class Level3Manager : MonoBehaviour
     {
         if (killed_enemies == totalToSpawn)
         {
-            _ = Kael.SendChatMessageAsync("This is a system message: you and the player just defeated the goblin army and moving to the next stage", KaelChat);
             GameManager.Instance.ChangeState(GameState.Level4);
         }
     }
