@@ -180,8 +180,8 @@
                         {
                             _ = SendChatMessageAsync("This is a system message: The player and Kael just arrived in front of you after defeating the goblin army", chats[1]);
 
-                        }                   
-                         }
+                        }
+                    }
                 }
                 else
                 {

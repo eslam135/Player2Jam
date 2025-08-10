@@ -1103,7 +1103,7 @@ MonoBehaviour:
   - {fileID: 658272352}
   - {fileID: 389426558}
   - {fileID: 408817034}
-  currentState: 0
+  currentState: 3
 --- !u!4 &168882813
 Transform:
   m_ObjectHideFlags: 0
@@ -2875,6 +2875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 825445875}
   Zarhakal: {fileID: 1222185978}
+  Kael: {fileID: 1974782609}
   zarhkalChat: {fileID: 2119458915}
   spawnPoint: {fileID: 408817034}
 --- !u!1 &439400400
